@@ -1,0 +1,4 @@
+<getAccountDetailById  xmlns="http://ecaps.ctl.com/service/account">
+               <accountId>Spain</accountId>
+               <accountSystemCode>Spain</accountSystemCode>
+            </getAccountDetailById>

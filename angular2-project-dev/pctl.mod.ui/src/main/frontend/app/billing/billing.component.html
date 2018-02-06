@@ -1,0 +1,192 @@
+<main class="billing">
+  <breadcrumb [breadcrumbs]="(user | async)?.breadcrumbs" [homePage]='false'></breadcrumb>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="text-success">
+          <svg class="cyclops-icon md">
+            <use xlink:href="#icon-compliance"></use>
+          </svg> Billing Details</h2>
+        <div class="card">
+          <div class="card-block">
+            <div class="row">
+              <div class="col-sm-6">
+                <h4 class="text-success"> SD-WAN
+                  <!-- {{(user | async)?.status.name}} <small class="deemphasize"> ({{(user | async)?.status.term}} months, {{(user | async)?.status.transport}})</small> --></h4>
+              </div>
+              <div class="col-sm-6 text-right">
+                <a [routerLink]="['/locations']">
+                  <svg class="cyclops-icon lg" aria-hidden="true">
+                    <use xlink:href='#icon-caret-left' />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="row">
+        <div class="col-sm-12">
+          <form class="form-horizontal" [formGroup]="billingForm" (ngSubmit)="billingSubmit()">
+            <h4 class="text-success">Headquarters Address</h4>
+            <span class="text-danger" *ngIf="billingValid && (billingResponse && billingResponse.code === '400')">
+               <ul>
+                  <li>{{billingResponse.message}}</li>
+               </ul>
+            </span>
+            <div class="form-group">
+              <label for="horizontalFormPassword" class="col-sm-3 control-label">Company Name <span class="text-danger">*</span></label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="companyName" placeholder="Company Name" formControlName="companyName" [value]="(user | async)?.billing?.companyName">
+                <control-messages [control]="billingForm.controls.companyName"></control-messages>
+              </div>
+            </div>
+
+            <!-- Shipping Address Section -->
+            <div>
+              <div class="form-group">
+                <label for="horizontalFormPassword" class="col-sm-3 control-label sr-only">Select Address</label>
+                <div class="col-sm-9 col-sm-push-3">
+                  <!--div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" /> Same as Shipping Address</a>
+                      </label>
+                    </div-->
+                </div>
+              </div>
+              <div class="form-group" formGroupName="hqAddress">
+                <label for="horizontalFormPassword" class="col-sm-3 control-label">Address Line 1 <span class="text-danger">*</span></label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="addressLine" placeholder="Address Line 1" formControlName="addressLine" [value]="(user | async)?.billing?.hqaddress.addressLine">
+                  <control-messages [control]="billingForm.controls.hqAddress.controls['addressLine']"></control-messages>
+                </div>
+              </div>
+              <div class="form-group" formGroupName="hqAddress">
+                <label for="horizontalFormPassword" class="col-sm-3 control-label">Address Line 2</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="street" placeholder="Address Line 2" formControlName="street" [value]="(user | async)?.billing?.hqaddress.street">
+                </div>
+              </div>
+              <div class="form-group" formGroupName="hqAddress">
+                <label for="country" class="col-sm-3 control-label">Country <span class="text-danger">*</span></label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="country" formControlName="country">
+                    <option *ngFor="let country of countries" [selected]="selectedDefault === 0" [value]="country.countryCode" >{{country.countryName}}</option>
+               </select>
+                </div>
+              </div>
+              <div class="form-group" formGroupName="hqAddress">
+                <label for="horizontalFormPassword" class="col-sm-3 control-label">State <span class="text-danger">*</span></label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="state" formControlName="state">
+                        <option value="">&nbsp;- Select -</option>
+                        <option *ngFor="let state of states" [value]="state.stateCode" [selected]="(user | async)?.billing?.hqaddress.state == state.stateCode" >{{state.stateName}}</option>
+               </select>
+                  <control-messages [control]="billingForm.controls.hqAddress.controls['state']"></control-messages>
+                </div>
+              </div>
+              <div class="form-group" formGroupName="hqAddress">
+                <label for="horizontalFormPassword" class="col-sm-3 control-label">City <span class="text-danger">*</span></label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="city" placeholder="City" formControlName="city" [value]="(user | async)?.billing?.hqaddress.city">
+                  <control-messages [control]="billingForm.controls.hqAddress.controls['city']"></control-messages>
+                </div>
+              </div> <!--(blur)="billingAddressValidation()"-->
+              <div class="form-group" formGroupName="hqAddress">
+                <label for="horizontalFormPassword" class="col-sm-3 control-label">Zip Code <span class="text-danger">*</span></label>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" formControlName="zipCode"
+                    [value]="(user | async)?.billing?.hqaddress.zipCode">
+                  <control-messages [control]="billingForm.controls.hqAddress.controls['zipCode']"></control-messages>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <h4 class="text-success">Billing Contact Details</h4>
+            <div class="form-group" formGroupName="billingContactDetails">
+              <label for="First Name" class="col-sm-3 control-label">First Name <span class="text-danger">*</span></label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="firstName" placeholder="firstName" formControlName="firstName" [value]="(user | async)?.billing?.billingContactDetails.firstName">
+                <control-messages [control]="billingForm.controls.billingContactDetails.controls['firstName']"></control-messages>
+              </div>
+            </div>
+            <div class="form-group" formGroupName="billingContactDetails">
+              <label for="Last Name" class="col-sm-3 control-label">Last Name <span class="text-danger">*</span></label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="city" placeholder="lastName" formControlName="lastName" [value]="(user | async)?.billing?.billingContactDetails.lastName">
+                <control-messages [control]="billingForm.controls.billingContactDetails.controls['lastName']"></control-messages>
+              </div>
+            </div>
+            <div class="form-group" formGroupName="billingContactDetails">
+              <label for="Job Title" class="col-sm-3 control-label">Job Title</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="jobTitle" placeholder="jobTitle" formControlName="jobTitle" [value]="(user | async)?.billing?.billingContactDetails?.jobTitle">
+                <control-messages [control]="billingForm.controls.billingContactDetails.controls['jobTitle']"></control-messages>
+              </div>
+            </div>
+            <div class="form-group" formGroupName="billingContactDetails">
+              <label for="Primary Phone" class="col-sm-3 control-label">Primary Phone <span class="text-danger">*</span></label>
+              <div class="col-sm-3">
+                <input type="tel" [textMask]="{mask: phoneMask}" placeholder="(XXX) XXX-XXXX" class="form-control" id="phoneNumber" formControlName="phoneNumber"
+                  [value]="(user | async)?.billing?.billingContactDetails.phoneNumber">
+                <control-messages [control]="billingForm.controls.billingContactDetails.controls['phoneNumber']"></control-messages>
+              </div>
+              <label for="Extn" class="col-sm-1 control-label">Extn</label>
+              <div class="col-sm-2">
+                <input type="tel" [textMask]="{mask: phoneExtnMask}" class="form-control" id="phoneNumberExtn" formControlName="phoneNumberExtn"
+                  [value]="(user | async)?.billing?.billingContactDetails?.phoneNumberExtn">
+                <control-messages [control]="billingForm.controls.billingContactDetails.controls['phoneNumberExtn']"></control-messages>
+              </div>
+            </div>
+            <div class="form-group" formGroupName="billingContactDetails">
+              <label for="Email" class="col-sm-3 control-label">Email <span class="text-danger">*</span></label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="email" placeholder="email" formControlName="email" [value]="(user | async)?.billing?.billingContactDetails.email">
+                <control-messages [control]="billingForm.controls.billingContactDetails.controls['email']"></control-messages>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group">
+              <div class="col-sm-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg" [disabled]="!billingForm.valid">Proceed</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--div class="col-sm-3">
+              <div class="card card-block">
+                <div class="card-header">
+                  <h4 class="text-success content-header">Order Summary</h4>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>SD WAN Basic</td>
+                        <td>$ 800</td>
+                      </tr>
+                      <tr>
+                        <td>SD WAN Premium</td>
+                        <td>$ 700</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="billing-summary">
+                    <div class="row">
+                    <div class="col-sm-12">
+                      <h4 class="currency">Total: $ 1500 <small>/ mo</small></h4>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12"><a class="text-success" href="#">View Details...</a></div>
+                  </div>
+                </div>              
+              </div>
+            </div-->
+      </div>
+    </section>
+
+  </div>
+</main>

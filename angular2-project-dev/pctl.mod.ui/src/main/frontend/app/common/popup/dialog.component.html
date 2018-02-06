@@ -1,0 +1,56 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+    <div>
+        <h2 class="text-center text-success">{{title}}</h2>
+        <button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">X</button>
+    </div>
+    <p [innerHTML]="descriptionHtml"></p>
+    <div *ngIf="title === 'SD-WAN Terms & Conditions'">
+        <ul *ngIf="(cart | async)?.lineItems.length > 0" class="dropdown-menu dropdown-menu-right">
+						<h4 id="ShoppingCart" class="text-success"><svg class="cyclops-icon md" aria-hidden="true"><use xlink:href='#icon-shopping-cart' /></svg> Your Order Summary</h4>
+						<div class="new-list-view-responsive new-list-view-responsive-sm">
+							<div id="Description" class="new-list-view-header ">
+								<h3 class="col col-25 color">Product</h3>
+								<h3 class="col col-15 color">Term</h3>
+								<h3 class="col col-25 color">Number of Locations</h3>
+								<h3 class="col col-20 color">Unit Price</h3>
+								<h3 class="col col-15 color">Total</h3>
+								<!--h3 class="col col-20 color">Action</h3-->
+							</div>
+							<ul class="new-list-view">
+								<li *ngFor="let product of (cart | async)?.lineItems;let i = index">
+								<div id="List1" class="list-view-item" >
+									<div class="col col-25 color"><span class="col-header">Product</span>{{product.productTemplateName}}</div>
+									<div class="col col-15"><span class="col-header">Term</span>{{product?.term}}</div>
+									<div class="col col-25"><span class="col-header">Number of Locations</span>{{product?.locations?.length}}</div>
+									<div class="col col-20"><span class="col-header">Unit Price</span>{{product.unitPrice | currency:'USD':true:'3.0-0'}}</div>
+									<div class="col col-15">
+										<span class="col-header">
+										Total</span>
+										{{product?.locations?.length === 0 ? 0 : product?.locations?.length * product.unitPrice | currency:'USD':true:'3.0-0'}}</div>
+									<!--div class="col col-20"><span class="col-header">Action</span>
+									<img src="../../assets/img/Edit.png" height="24px" width="24px"  alt="Edit"--> 
+									<!--svg class="cyclops-icon md" aria-hidden="true"><use xlink:href='#icon-check' />{{getTotalPrice(product.locations.length * product.unitPrice)}}</svg-->
+									<!--svg class="cyclops-icon md" aria-hidden="true"><use xlink:href='#icon-times' /></svg>
+									</div-->
+								</div>
+								</li>
+ 								<li> 
+								<div class="card">
+									<div id="CardFooter" class="card-footer">
+									<div class="row">
+									<div  class="col-xs-6"><h4 id="Total">Total:</h4 ></div>
+									<div  class="col-sm-6 text-right"><h4 id="Dollar">{{getTotalPrice() === 0 ? getTotalPrice() : getTotalPrice() | currency:'USD':true:'3.0-0'}}</h4></div>
+									</div>
+									</div>
+								</div>
+								</li>
+							</ul>
+						</div>
+					</ul>
+    </div>
+    &emsp;<label><input type="checkbox" (click)="enableButton($event.target.checked)"> I have read the Terms & Conditions &emsp; &emsp; </label>
+    <button class="btn btn-primary btn-lg" [disabled]="!enable" (click)="sendValue(true)">Accept</button>&emsp; &emsp;
+    <button class="btn btn-primary btn-lg" [disabled]="!enable" (click)="sendValue(false)">Reject</button> &nbsp; &nbsp;
+    <a class="btn btn-primary btn-lg text-left" href="{{pdfURL}}" target="_blank" ><svg class="cyclops-icon" aria-hidden="true"><use xlink:href='#icon-file'/></svg> Print</a>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>

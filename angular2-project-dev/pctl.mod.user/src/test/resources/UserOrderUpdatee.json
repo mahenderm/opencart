@@ -1,0 +1,11 @@
+{
+
+  "cartId":"testId",
+  "state":"1",
+  "productInfo" : [
+    { "product" : "SD WAN",
+      "locationSize" : 0
+    }
+  ],
+  "orderDate":"29/11/2016"
+}

@@ -1,0 +1,48 @@
+# PROFILES
+spring:
+    application.name: config-service
+    profiles.active: @default.spring.profiles@
+    aop:
+        proxyTargetClass: true
+# CONFIGURATION REPO
+    cloud:
+        config:
+            server:
+                git:
+                    uri: file:///d:/poc/config/local-cfg
+                default-label: ${CONFIGURATION_BRANCH:master}
+
+
+#${CONFIGURATION_REPOSITORY:https://github.com/beginsmauel/angular2-cfg}
+# SERVICE VERSION
+info:
+    version: @project.version@
+
+# EMBEDDED SERVER CONFIGURATION
+server:
+    port: ${port:8888}
+
+security:
+  basic:
+    enabled: false
+---
+
+spring:
+  profiles: docker
+  cloud:
+      config:
+          server:
+              git:
+                  uri: file:///d:/poc/config/local-cfg
+
+
+---
+
+spring:
+  profiles: standalone
+  cloud:
+      config:
+          server:
+              git:
+                  uri: file:///d:/poc/config/local-cfg
+

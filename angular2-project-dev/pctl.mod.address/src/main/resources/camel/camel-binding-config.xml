@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <soapEndPoints>
+        <soapEndPoint id="CivicAddressValidation">
+            <serviceName>CivicAddressValidation</serviceName>
+            <velocityTemplate>camel/templates/CivicAddressValidation.vm</velocityTemplate>
+            <serviceEndPoint>http://geowstest1.dev.qintra.com/v2/AddressService.svc</serviceEndPoint>
+            <soapAction>http://geo.domain.as.ctl.com/v2/AddressServiceContract/CivicAddressValidation</soapAction>
+            <!--<baseXPath>/v2:checkForUserResponse/return</baseXPath>-->
+            <!--<baseXPath>/CivicAddressValidationResponse</baseXPath>-->
+            <baseXPath>/*[name()='CivicAddressValidationResponse']</baseXPath>
+            <secondaryXPath>Test</secondaryXPath>
+            <namespace>
+                <prefix>v2</prefix>
+                <uri>http://geo.domain.as.ctl.com/v2</uri>
+            </namespace>
+            <namespace>
+                <prefix>a</prefix>
+                <uri>http://geo.domain.as.ctl.com/v2/Types/Response</uri>
+            </namespace>
+            <namespace>
+                <prefix>b</prefix>
+                <uri>http://geo.domain.as.ctl.com/v2/Types</uri>
+            </namespace>
+            <unmarshalClass>com.centurylink.pctl.mod.address.domain.camel.CivicAddressValidationResponse</unmarshalClass>
+            <unmarshalField>CivicAddressValidationResponse</unmarshalField>
+        </soapEndPoint>
+    </soapEndPoints>
+</config>

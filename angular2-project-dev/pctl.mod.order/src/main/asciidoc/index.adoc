@@ -1,0 +1,18 @@
+include::intro.adoc[]
+
+[[resources]]
+= Resources
+
+[[resources-Order]]
+== Order
+The Order resource is used to list the orders.
+include::{snippets}/order-summary/response-fields.adoc[]
+[[resources-Order-Request]]
+=== Order request
+Order Request
+include::{snippets}/order-summary/curl-request.adoc[]
+[[resources-Order-Response]]
+=== Order Response
+Order Response
+include::{snippets}/order-summary/http-response.adoc[]
+

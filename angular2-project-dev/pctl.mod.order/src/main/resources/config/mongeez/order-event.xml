@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mongoChangeLog>
+    <changeSet changeId="ChangeSet-1" author="pctl">
+        <script>
+            db.order_event.drop();
+            db.order_event.insert(
+            [{
+                "orderId": "101112356",
+                "orderEventType": "CREATED"
+            },{
+                "orderId" : "101112356",
+                "orderEventType": "UPDATED",
+                "billingAddress" : {
+                    "locationName":"location",
+                    "addressLine":"address line1",
+                    "street":"street",
+                    "city":"city",
+                    "country":"country",
+                    "state":"state",
+                    "zipCode":"14213"
+                }
+            }
+            ]);
+        </script>
+    </changeSet>
+    <changeSet changeId="ChangeSet-2" author="pctl">
+        <script>
+            db.order_event.drop();
+            db.order_event.insert(
+            [{
+            "orderId": "101112356",
+            "orderEventType": "CREATED"
+            },{
+            "orderId" : "101112356",
+            "orderEventType": "UPDATED",
+            "companyName":"HelloInfoTech",
+            "billingAddress" : {
+                "locationName":"location",
+                "addressLine":"address line1",
+                "street":"street",
+                "city":"city",
+                "country":"country",
+                "state":"state",
+                "zipCode":"14213"
+             }
+            }
+            ]);
+        </script>
+    </changeSet>
+    <changeSet changeId="ChangeSet-3" author="pctl">
+        <script>
+            db.order_event.drop();
+            db.order_event.insert(
+            [{
+            "orderId": "101112356",
+            "orderEventType": "CREATED",
+            "shoppingCart" : {
+            "cartId": "cartIdcartId",
+            "lineItems": [
+            {
+            "productId": "sdwan200",
+            "quantity": 2,
+            "productName": "SD WAN Basic HA",
+            "productTemplateName": "SD WAN BASIC HA",
+            "productTemplateId": "sdwanbasicha",
+            "unitPrice": "200.00",
+            "locations": [
+            {
+            "id": "addressBasicHA1",
+            "serviceAddress": {
+            "locationName": "address1",
+            "street": "street1",
+            "city": "city1",
+            "country": "USA",
+            "state": "NJ",
+            "zipCode": "11523"
+            },
+            "shippingAddress": {
+            "locationName": "address2",
+            "street": "street2",
+            "city": "city2",
+            "country": "USA",
+            "state": "CA",
+            "zipCode": "22556"
+            },
+            "serviceContact": {
+            "email": "test@gmail.com",
+            "firstName": "Jack",
+            "lastName": "Anderson",
+            "phoneNumber": "45556367"
+            }
+            }]
+            }]
+            }
+            },{
+            "orderId" : "101112356",
+            "orderEventType": "UPDATED",
+            "companyName":"HelloInfoTech",
+            "billingAddress" : {
+            "locationName":"location",
+            "addressLine":"address line1",
+            "street":"street",
+            "city":"city",
+            "country":"country",
+            "state":"state",
+            "zipCode":"14213"
+            }
+            }
+
+            ]);
+        </script>
+    </changeSet>
+    <changeSet changeId="ChangeSet-4" author="pctl">
+    <script>
+        db.order_event.drop();
+        db.order_event.insert(
+        [{
+        "orderId": "101112356",
+        "orderEventType": "CREATED",
+        "cartId": "cartIdcartId",
+        "shoppingCart" : {
+        "cartId": "cartIdcartId",
+        "lineItems": [
+        {
+        "productId": "sdwan200",
+        "quantity": 2,
+        "productName": "SD WAN Basic HA",
+        "productTemplateName": "SD WAN BASIC HA",
+        "productTemplateId": "sdwanbasicha",
+        "unitPrice": "200.00",
+        "locations": [
+        {
+        "id": "addressBasicHA1",
+        "serviceAddress": {
+        "locationName": "address1",
+        "street": "street1",
+        "city": "city1",
+        "country": "USA",
+        "state": "NJ",
+        "zipCode": "11523"
+        },
+        "shippingAddress": {
+        "locationName": "address2",
+        "street": "street2",
+        "city": "city2",
+        "country": "USA",
+        "state": "CA",
+        "zipCode": "22556"
+        },
+        "serviceContact": {
+        "email": "test@gmail.com",
+        "firstName": "Jack",
+        "lastName": "Anderson",
+        "phoneNumber": "45556367"
+        }
+        }]
+        }]
+        }
+        },{
+        "orderId" : "101112356",
+        "cartId": "cartIdcartId",
+        "orderEventType": "UPDATED",
+        "companyName":"HelloInfoTech",
+        "billingAddress" : {
+        "locationName":"location",
+        "addressLine":"address line1",
+        "street":"street",
+        "city":"city",
+        "country":"country",
+        "state":"state",
+        "zipCode":"14213"
+        }
+        }
+
+        ]);
+    </script>
+    </changeSet>
+</mongoChangeLog>

@@ -1,0 +1,89 @@
+  <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2 class="text-success"><svg class="cyclops-icon md"><use xlink:href="#icon-compliance"></use></svg> Order Summary</h2>
+          </div>
+          <div class="col-sm-6 text-right" *ngIf="(cart | async)?.lineItems.length > 0">
+            <a [routerLink]="[(user | async)?.previousUrl]">
+                  <svg class="cyclops-icon lg" aria-hidden="true">
+                    <use xlink:href='#icon-caret-left' />
+                  </svg>
+            </a>
+          </div>
+          <div class="col-sm-6 text-right" *ngIf="(cart | async)?.lineItems.length === 0">
+            <a [routerLink]="['/home']">
+                  <svg class="cyclops-icon lg" aria-hidden="true">
+                    <use xlink:href='#icon-caret-left' />
+                  </svg>
+            </a>
+          </div>
+        </div>
+      
+      <section>
+        <div class="row">
+          <div class="col-sm-12">
+              <div class="new-list-view-responsive new-list-view-responsive-sm">
+                <div class="new-list-view-header">
+                    <h3 class="col col-25">Product</h3>
+                    <h3 class="col col-15">Term</h3>
+                    <h3 class="col col-25">Location</h3>
+                    <h3 class="col col-15">Unit Price</h3>
+                    <h3 class="col col-20">Total</h3>
+                </div>
+                <ul class="new-list-view">
+                  <li *ngFor="let product of (cart | async)?.lineItems;let i = index">
+                    <div class="list-view-item">
+                      <div class="col col-25"><span class="col-header">Product</span>{{product.productTemplateName}}</div>
+                      <div class="col col-40"><span class="col-header">Term</span>{{product.term}}</div>
+                      <div class="col col-15"></div>
+                      <div class="col col-10">
+                        <span class="col-header">Total</span>
+                        {{product?.locations?.length === 0 ? 0 : product?.locations?.length * product.unitPrice | currency:'USD':true:'3.0-0'}}
+                      </div>
+                      <div class="col col-10">
+                        <button class="btn btn-primary btn-md btn-icon text-right" (click)="editLineItem(product)"><img src="../../assets/img//Edit.png" width="24" height="24" alt="Edit"/></button>
+                        <button class="btn btn-primary btn-md btn-icon text-right" (click)="myModal.open()">
+                          <svg class="cyclops-icon" aria-hidden="true">
+                              <use xlink:href='#icon-trash' />
+                          </svg></button>
+                      </div>
+                    </div>
+                    <ul class="new-list-view">
+                      <li *ngFor="let location of product.locations">
+                        <div class="list-view-item">
+                          <div class="col col-25"></div>
+                          <div class="col col-15"></div>
+                          <div class="col col-25"><span class="col-header">Location</span>{{location.serviceAddress.locationName}}</div>
+                          <div class="col col-15"><span class="col-header">Unit Price</span>{{product.unitPrice | currency:'USD':true:'3.0-0'}}</div>
+                          <div class="col col-20"></div>
+                        </div>
+                      </li>
+                    </ul>
+                    <modal #myModal title="Confirm Delete" 
+                            submitButtonLabel="Yes"
+                            cancelButtonLabel="No"
+                            (onSubmit)="deleteLineItem(product)">
+                          <modal-content>
+                              Are you sure want to delete the {{product.productTemplateName}} Product Item?
+                          </modal-content>
+                    </modal>
+                  </li>
+                  <li *ngIf="(cart | async)?.lineItems.length === 0">
+                    <div class="list-view-item">
+                      <div class="col col-100"><h3>No items in cart</h3></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-footer billing-summary">
+                      <div class="row">
+                        <div class="col-sm-10 text-right"><h4 class="currency">Total:</h4></div>
+                        <div class="col-sm-2 text-right"><h4 class="currency">{{getTotalPrice() === 0 ? getTotalPrice() : getTotalPrice() | currency:'USD':true:'3.0-0'}}</h4></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </section>
+      </div>

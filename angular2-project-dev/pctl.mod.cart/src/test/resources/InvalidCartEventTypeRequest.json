@@ -1,0 +1,11 @@
+{
+"cartId":"cartTestId",
+"cartEventType": "ADD_ITEM",
+"productId":"sdwan2002",
+"quantity": "1",
+"productName" : "SD WAN",
+"productTemplateName":"SD WAN BASIC",
+"productTemplateId" : "sdwanbasic",
+"unitPrice" : "200.00",
+  "term" : "12"
+}

@@ -1,0 +1,118 @@
+
+
+include::intro.adoc[]
+
+[[resources]]
+= Token
+
+[[resources-/auth/token/generate]]
+== Token
+include::{snippets}/Generated-Token/response-fields.adoc[]
+[[resources-User-Request]]
+=== Token request
+Token Request
+include::{snippets}/Generated-Token/curl-request.adoc[]
+[[resources-User-Response]]
+=== Token Response
+Token Response
+include::{snippets}/Generated-Token/http-response.adoc[]
+
+
+[[resources]]
+= User Init
+
+[[resources-/auth/user/init]]
+== User Init
+The User resource is used to list.
+include::{snippets}/User-Init/response-fields.adoc[]
+[[resources-User-Init-Request]]
+=== User Init request
+User Init Request
+include::{snippets}/User-Init/curl-request.adoc[]
+[[resources-User-Init-Response]]
+=== User Init Response
+User Init Response
+include::{snippets}/User-Init/http-response.adoc[]
+
+
+[[resources]]
+= Cart Init
+
+[[resources-/auth/user/cart/init]]
+== Cart Init
+
+include::{snippets}/Cart-Init/response-fields.adoc[]
+[[resources-Cart-Init-Request]]
+=== Cart Init request
+Cart Init request
+include::{snippets}/Cart-Init/curl-request.adoc[]
+[[resources-Cart-Init-Response]]
+=== Cart Init Response
+Cart Init Response
+include::{snippets}/Cart-Init/http-response.adoc[]
+
+
+[[resources]]
+= User Me
+
+[[resources-/auth/user/init]]
+== User Me
+The User resource is used to list.
+include::{snippets}/User-Me/response-fields.adoc[]
+[[resources-User-Me-Request]]
+=== User Me request
+User Me request
+include::{snippets}/User-Me/curl-request.adoc[]
+[[resources-User-Me-Response]]
+=== User Me Response
+User Me request
+include::{snippets}/User-Me/http-response.adoc[]
+
+[[resources]]
+=Find-User
+
+[[resources-/auth/user/find]]
+== Find-User
+
+include::{snippets}/Find-User/response-fields.adoc[]
+[[resources-Find-User-Request]]
+=== Find-User request
+Find-User request
+include::{snippets}/Find-User/curl-request.adoc[]
+[[resources-Find-User-Response]]
+=== Find-User Response
+Find-User request
+include::{snippets}/Find-User/http-response.adoc[]
+
+[[resources]]
+=Order-Update
+
+[[resources-/auth/user/order/update]]
+== Order-Update
+
+include::{snippets}/Order-Update/response-fields.adoc[]
+[[resources-Order-Update-Request]]
+=== Order-Update request
+Order-Update request
+include::{snippets}/Order-Update/curl-request.adoc[]
+[[resources-Find-User-Response]]
+=== Order-Update Response
+Order-Update request
+include::{snippets}/Order-Update/http-response.adoc[]
+
+
+[[resources]]
+Logged-User
+
+[[resources-/auth/user/logged-user]]
+== Logged-User
+
+include::{snippets}/Logged-User/response-fields.adoc[]
+[[resources-Logged-User-Request]]
+=== Logged-User request
+Logged-User request
+include::{snippets}/Logged-User/curl-request.adoc[]
+[[resources-Logged-User-Response]]
+===Logged-User Response
+Logged-User request
+include::{snippets}/Logged-User/http-response.adoc[]

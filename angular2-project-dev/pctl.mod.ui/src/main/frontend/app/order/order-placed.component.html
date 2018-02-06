@@ -1,0 +1,75 @@
+  <!--breadcrumb [breadcrumbs]="(user | async)?.breadcrumbs" [homePage]='false'></breadcrumb-->
+  <div class="container">
+     <!-- <div class="row">
+        <div class="col-sm-12">
+          <div class="alert alert-success">
+            <h4 class="text-center">Order #12345678 has been successfully placed. Order confirmation has been sent to your registered Email ID.</h4>
+          </div>
+        </div>
+        </div> -->
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="text-success">Order Details - Order #12345678</h2>
+          </div>
+        </div>
+      
+      <section>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="new-list-view-responsive new-list-view-responsive-sm">
+                <div class="new-list-view-header">
+                    <h3 class="col col-5">
+                      <svg class="cyclops-icon md" aria-hidden="true">
+                        <use xlink:href='#icon-angle-right' />
+                      </svg>
+                    </h3>
+                    <h3 class="col col-20">Location</h3>
+                    <h3 class="col col-20">Service Contact</h3>
+                    <h3 class="col col-45">Service Address</h3>
+                </div>
+                <ul class="new-list-view">
+                  <li *ngFor="let location of locations">
+                    <div class="list-view-item">
+                      <accordion>
+                        <accordion-group #group>
+						              <div accordion-heading>
+                            <div class="col col-5"><span class="col-header"></span>
+                              <svg class="cyclops-icon md" aria-hidden="true">
+                                <use xlink:href='#icon-angle-right' *ngIf="!group?.isOpen"/>
+                                <use xlink:href='#icon-angle-down' *ngIf="group?.isOpen"/>
+                              </svg>
+                            </div>
+                            <div class="col col-20"><span class="col-header">Location</span>{{ location.name }}</div>
+                            <div class="col col-20"><span class="col-header">Service Contact</span>{{ location.serviceContact.firstAndLastName }}</div>
+                            <div class="col col-45"><span class="col-header">Service Address</span>{{ location.address }}</div>
+                          </div>
+                        <section class="col-sm-12">
+                            <div class="col-sm-4">
+                              <h5 class="text-success">Service Contact</h5>
+                              <p>{{ location.serviceContact.firstAndLastName }}</p>
+                              <p>{{ location.serviceContact.email }}</p>
+                              <p>{{ location.serviceContact.phoneNumber }} <span *ngIf="location.serviceContact.phoneNumberExtn" > Extn. {{ location.serviceContact.phoneNumberExtn }}</span></p>
+                           </div>
+                           <div class="col-sm-4">
+                              <h5 class="text-success">Service Address</h5>
+                              <p>{{ location.serviceAddress.locationName }}</p>
+                              <p>{{ location.serviceAddress.addressLine }}</p>
+                              <p>{{ location.serviceAddress.addressDetails }}</p>
+                           </div>
+                           <div class="col-sm-4">
+                              <h5 class="text-success">Shipping Address</h5>
+                              <p>{{ location.shippingAddress.locationName }}</p>
+                              <p>{{ location.shippingAddress.addressLine }}</p>
+                              <p>{{ location.shippingAddress.addressDetails }}</p>
+                           </div>
+                        </section>
+                        </accordion-group>
+                     </accordion>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </section>
+      </div>

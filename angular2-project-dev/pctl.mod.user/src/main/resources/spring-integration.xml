@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:int-mongodb="http://www.springframework.org/schema/integration/mongodb"
+       xmlns:jms="http://www.springframework.org/schema/integration/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/integration
+		http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration/mongodb
+		http://www.springframework.org/schema/integration/mongodb/spring-integration-mongodb.xsd
+		http://www.springframework.org/schema/integration/jms
+		http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd" >
+
+
+    <bean id="amqConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <constructor-arg index="0" value="${spring.activemq.broker-url}"/>
+        <property name="trustAllPackages" value="true"/>
+    </bean>
+
+    <bean id="defaultDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="${spring.activemq.user-queue}" />
+    </bean>
+
+
+    <!-- ConnectionFactory Definition -->
+    <bean id="connectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
+        <constructor-arg ref="amqConnectionFactory" />
+    </bean>
+
+    <bean id="listener" class="com.centurylink.pctl.mod.user.domain.jms.PctlUserMyMessageListener">
+    </bean>
+
+    <bean id="ErrorHandler"
+          class="com.centurylink.pctl.mod.user.domain.jms.PctlUserErrorHandlerAmq">
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.jms.connection.JmsTransactionManager">
+        <constructor-arg index="0" ref="connectionFactory"/>
+    </bean>
+
+    <jms:message-driven-channel-adapter id="EventMessageDrivenChannelAdapter"
+                                        connection-factory="connectionFactory"
+                                        destination="defaultDestination"
+                                        channel="inputChannel"
+                                       transaction-manager="transactionManager"
+
+        error-channel="errorChannel" />
+
+    <int:channel id="inputChannel"   />
+
+
+    <int:transformer input-channel="inputChannel" output-channel="splittingChannel" ref="listener"
+                     method="onMessage"   />
+
+    <int:channel id="splittingChannel"   />
+    <int:service-activator input-channel="errorChannel" ref="ErrorHandler" method="handleError"/>
+   <int:service-activator input-channel="splittingChannel" ref="listener"  output-channel="nullChannel" method="onHandle" requires-reply="false" />
+</beans>

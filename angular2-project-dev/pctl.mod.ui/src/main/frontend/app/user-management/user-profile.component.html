@@ -1,0 +1,73 @@
+<main class="summary">
+  <breadcrumb [breadcrumbs]="(userDetails | async)?.breadcrumbs" [homePage]='false'></breadcrumb>
+  <div class="container">
+    <div class="row">
+      <div id="UserProfile" class="col-md-3 col-sm-4 ">
+        <img class="profile" src="../assets/img/user1.png" alt="user">
+      </div>
+      <div class="col-md-9 col-sm-8">
+        <h2 class="text-success">{{(userDetails | async)?.firstName+' '+(userDetails | async)?.lastName}}</h2>
+        <p>
+          <svg class="cyclops-icon">
+            <use xlink:href="#icon-envelope"></use>
+          </svg> {{(userDetails | async)?.email}}</p>
+        <p>
+          <svg class="cyclops-icon">
+            <use xlink:href="#icon-phone"></use>
+          </svg> {{(userDetails | async)?.phoneNumber}}</p>
+        <p>
+          <svg class="cyclops-icon">
+            <use xlink:href="#icon-policies"></use>
+          </svg> {{(userDetails | async)?.companyName}}</p>
+        <p>
+          <svg class="cyclops-icon">
+            <use xlink:href="#icon-policies"></use>
+          </svg> {{(userDetails | async)?.einNumber}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="text-success">Order History</h3>
+      </div>
+    </div>
+    <section>
+      <div class="new-list-view-responsive new-list-view-responsive-sm">
+        <!-- <div class="new-list-view-toolbar">
+    <button class="btn btn-primary">create item</button>
+    <div class="new-list-view-toolbar-right">
+      ...
+    </div>
+  </div>-->
+        <div class="new-list-view-header">
+          <h3 class="col col-20">Order Id</h3>
+          <h3 class="col col-20">Order Date</h3>
+          <h3 class="col col-20">Product Option</h3>
+          <h3 class="col col-20">No. Of locations</h3>
+          <h3 class="col col-20">price</h3>
+        </div>
+        <ul class="new-list-view">
+          <li *ngFor="let orderHistory of (userDetails | async)?.orderHistory;let i=index">
+            <div class="list-view-link-item">
+              <div class="col col-20"><span class="col-header">Order Id</span><a [routerLink]="['/']">{{orderHistory.orderId}}</a></div>
+              <div class="col col-20"><span class="col-header">Order Date</span>{{orderHistory.orderDate}}</div>
+              <div class="col col-20"><span class="col-header">Product Option</span>{{orderHistory.productInfo[0].product}}</div>
+              <div class="col col-20"><span class="col-header">No. Of locations</span>{{orderHistory.productInfo[0].locationSize}}</div>
+              <div class="col col-20"><span class="col-header">price</span>{{orderHistory.productInfo[0].price}}</div>
+            </div>
+            <ul class="new-list-view">
+              <li *ngFor="let productInfo of orderHistory.productInfo;let j=index">
+                <div class="list-view-link-item" *ngIf="j!==0">
+                  <div class="col col-20"><span class="col-header"></span></div>
+                  <div class="col col-20"><span class="col-header"></span></div>
+                  <div class="col col-20"><span class="col-header">Product Option</span>{{productInfo.product}}</div>
+                  <div class="col col-20"><span class="col-header">No. Of locations</span>{{productInfo.locationSize}}</div>
+                  <div class="col col-20"><span class="col-header">price</span>{{productInfo.price}}</div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</main>

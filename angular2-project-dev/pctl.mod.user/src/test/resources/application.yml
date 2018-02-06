@@ -1,0 +1,38 @@
+spring:
+    jackson.serialization:
+        write_dates_as_timestamps: false
+    data:
+      mongodb.host: localhost
+      mongodb.port: 27017
+      mongodb.uri: mongodb://localhost/pctl_test
+      mongodb.database: pctl_test
+    activemq:
+      broker-url: tcp://DS-FKXNWQ1:61616
+      user-queue: com.ctl.user.queue
+      cart-queue: com.ctl.cart.queue
+      order-queue: com.ctl.order.queue
+      sfaint-queue: com.ctl.sfaint.queue
+      default-queue: com.ctl.default.queue
+
+jwt:
+    tokenExpirationTime: 43200 # Number of minutes
+    refreshTokenExpTime: 43200 # Minutes
+    tokenIssuer: Ctl
+    tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+    header: Authorization
+    secret: qwertyuiopasdfghjklzxcvbnm123456
+    expiration: 604800
+    defaultTestUser: apiTestUser@ctl.com
+    route:
+      authentication:
+        path: auth
+
+redis:
+    cacheHost: 127.0.0.1 # Host name
+    cachePort: 6379 # port number
+    cacheExpiration: 300 #Seconds
+
+
+liquibase:
+    contexts: test
+spring.profiles.include: test

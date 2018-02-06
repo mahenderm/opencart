@@ -1,0 +1,15 @@
+{
+  "cartId": "cart1",
+  "orderId": "cart11611140653311188",
+  "companyName":"HelloInfoTech",
+  "orderEventType": "UPDATED",
+  "billingAddress": {
+    "locationName": "location1",
+    "addressLine": "address line1",
+    "street": "street",
+    "city": "city",
+    "country": "country",
+    "state": "state",
+    "zipCode": "142134666"
+  }
+}

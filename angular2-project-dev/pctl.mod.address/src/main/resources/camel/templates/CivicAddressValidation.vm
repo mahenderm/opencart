@@ -1,0 +1,9 @@
+<CivicAddressValidation xmlns="http://geo.domain.as.ctl.com/v2">
+<request>
+<ClientId xmlns="http://geo.domain.as.ctl.com/Types/Request">${body.clientId}</ClientId>
+<AddressLine1 xmlns="http://geo.domain.as.ctl.com/v2/Types/Request">${body.addressLine}</AddressLine1>
+<Locality  xmlns="http://geo.domain.as.ctl.com/v2/Types/Request">${body.city}</Locality>
+<StateOrProvince xmlns="http://geo.domain.as.ctl.com/v2/Types/Request">${body.state}</StateOrProvince>
+<PostCode xmlns="http://geo.domain.as.ctl.com/v2/Types/Request">${body.zipCode}</PostCode>
+</request>
+</CivicAddressValidation>

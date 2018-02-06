@@ -1,0 +1,43 @@
+<main class="locations">
+  <breadcrumb [breadcrumbs]="(user | async)?.breadcrumbs" [homePage]='false'></breadcrumb>
+  <div class="container">
+    <!-- <div class="row">
+         <div class="col-sm-12">
+            <div class="alert alert-success">
+               <h4>New Location Added.</h4>
+            </div>
+         </div>
+      </div> -->
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="text-success">
+          <svg class="cyclops-icon md">
+            <use xlink:href="#icon-globe"></use>
+          </svg>
+          Locations
+        </h2>
+        <div class="card">
+          <div class="card-block">
+            <div class="row">
+              <div class="col-sm-6">
+                <h4 class="text-success">{{(user | async)?.status.name}} <small class="deemphasize"> ({{(user | async)?.status.term}} months, {{(user | async)?.status.transport}})</small></h4>
+              </div>
+              <div class="col-sm-6 text-right">
+                <a [routerLink]="['/home']">
+                  <svg class="cyclops-icon lg" aria-hidden="true">
+                    <use xlink:href='#icon-caret-left' />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section>
+      <locations-form (locationUpdateEvent)=onLocationUpdate($event) (locationAddEvent)=onLocationAdd($event) (formDirtyEvent)=onFormDirty($event) [formData]="formData"></locations-form>
+      <hr>
+      <locations-list [items]="locations" (editEvent)=editAction($event) (deleteEvent)=deleteAction($event)></locations-list>
+    </section>
+  </div>
+</main>

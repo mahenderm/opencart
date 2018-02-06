@@ -1,0 +1,45 @@
+     <createEnterprise xmlns="http://ecaps.ctl.com/service/enterpriseAdmin">
+
+           <enterprise xmlns="http://ecaps.ctl.com/service/enterpriseAdmin">
+             <createdDate xmlns="http://ecaps.ctl.com/serviceObject">?</createdDate>
+              <creditHoldIndicator>?</creditHoldIndicator>
+              <deactivated>?</deactivated>
+
+              <deactivatedDate>?</deactivatedDate>
+
+              <deactivatedStatusCode>?</deactivatedStatusCode>
+
+              <defaultIndicator>?</defaultIndicator>
+
+              <desistAniIndicator>?</desistAniIndicator>
+
+              <desistCardIndicator>?</desistCardIndicator>
+
+              <desistDedicated8XXIndicator>?</desistDedicated8XXIndicator>
+
+              <desistSwitched8XXIndicator>?</desistSwitched8XXIndicator>
+
+              <enewsIndicator>?</enewsIndicator>
+
+              <enterpriseChannelId>?</enterpriseChannelId>
+
+              <enterpriseCustomerType>?</enterpriseCustomerType>
+
+              <enterpriseEmailAddress>?</enterpriseEmailAddress>
+
+              <enterpriseId>?</enterpriseId>
+
+              <enterpriseName>?</enterpriseName>
+
+              <noPicIndicator>?</noPicIndicator>
+
+              <originTypeCode>?</originTypeCode>
+              <parentEnterpriseInd>?</parentEnterpriseInd>
+
+              <remoteControlId>?</remoteControlId>
+              <selfRegistration>?</selfRegistration>
+
+              <userEnterpriseAlias>?</userEnterpriseAlias>
+           </enterprise>
+        </createEnterprise>
+

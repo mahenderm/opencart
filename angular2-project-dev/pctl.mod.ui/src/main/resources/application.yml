@@ -1,0 +1,149 @@
+# EMBEDDED SERVER CONFIGURATION
+server:
+    port: ${port:8080}
+    context-path: /
+    error.whitelabel.enabled: false
+    compression:
+      enabled: true
+      min-response-size: 1024
+      mime-types: text/html, text/xml, text/plain, text/css, application/javascript, application/json
+
+spring:
+    aop:
+        proxyTargetClass: true
+    activemq:
+      broker-url: tcp://DS-FKXNWQ1:61616
+      user-queue: com.ctl.user.queue
+      cart-queue: com.ctl.cart.queue
+      order-queue: com.ctl.order.queue
+      sfaint-queue: com.ctl.sfaint.queue
+      default-queue: com.ctl.default.queue
+
+jwt:
+    tokenExpirationTime: 2592000 # Number of minutes
+    refreshTokenExpTime: 2592000 # Minutes
+    tokenIssuer: Ctl
+    tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+    publicKey: apiclient@ctl.com
+    header: Authorization
+    route:
+      authentication:
+        path: auth
+
+security:
+  basic:
+    enabled: false
+
+redis:
+    cacheHost: 127.0.0.1 # Host name
+    cachePort: 6379 # port number
+    cacheExpiration: 300 #Seconds
+
+management:
+  security:
+    enabled: false
+
+# EUREKA
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+# ZULL
+zuul:
+  routes:
+     product-service:
+          sensitiveHeaders:
+          path: /api/product-service/**
+          stripPrefix: true
+     address-service:
+          sensitiveHeaders:
+          path: /api/address-service/**
+          stripPrefix: true
+     notification-service:
+          sensitiveHeaders:
+          path: /api/notification-service/**
+          stripPrefix: true
+     user-service:
+          sensitiveHeaders:
+          path: /auth/**
+          stripPrefix: false
+     cart-service:
+          sensitiveHeaders:
+          path: /api/cart-service/**
+          stripPrefix: true
+     order-service:
+           sensitiveHeaders:
+           path: /api/order-service/**
+           stripPrefix: true
+  add-proxy-headers: true
+
+---
+
+spring:
+  profiles: docker
+  activemq:
+    broker-url: tcp://DS-FKXNWQ1:61616
+    user-queue: com.ctl.user.queue
+    cart-queue: com.ctl.cart.queue
+    order-queue: com.ctl.order.queue
+    sfaint-queue: com.ctl.sfaint.queue
+    default-queue: com.ctl.default.queue
+
+# EUREKA
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8081/eureka/
+
+# ZULL
+zuul:
+  routes:
+     user-service:
+          url: http://${eureka.instance.hostname}:8083
+     product-service:
+          url: http://${eureka.instance.hostname}:8082
+     address-service:
+          url: http://${eureka.instance.hostname}:8085
+     notification-service:
+          url: http://${eureka.instance.hostname}:8086
+     cart-service:
+          url: http://${eureka.instance.hostname}:8087
+     order-service:
+          url: http://${eureka.instance.hostname}:8088
+
+---
+
+spring:
+  profiles: standalone
+  activemq:
+      broker-url: tcp://DS-FKXNWQ1:61616
+      user-queue: com.ctl.user.queue
+      cart-queue: com.ctl.cart.queue
+      order-queue: com.ctl.order.queue
+      sfaint-queue: com.ctl.sfaint.queue
+      default-queue: com.ctl.default.queue
+
+# EUREKA
+eureka:
+  instance:
+    hostname: localhost
+    port: 8081
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
+# ZULL
+zuul:
+  routes:
+     user-service:
+          url: http://${eureka.instance.hostname}:8083
+     product-service:
+          url: http://${eureka.instance.hostname}:8082
+     address-service:
+          url: http://${eureka.instance.hostname}:8085
+     notification-service:
+          url: http://${eureka.instance.hostname}:8086
+     cart-service:
+          url: http://${eureka.instance.hostname}:8087
+     order-service:
+          url: http://${eureka.instance.hostname}:8088

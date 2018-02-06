@@ -1,0 +1,20 @@
+include::intro.adoc[]
+
+[[resources]]
+= Resources
+
+[[resources-sfaint]]
+== sfaint
+The sfaint resource is used to list.
+include::{snippets}/list-sfaint/response-fields.adoc[]
+[[resources-sfaint-Request]]
+=== sfaint request
+sfaint Request
+include::{snippets}/list-sfaint/curl-request.adoc[]
+[[resources-sfaint-Response]]
+=== sfaint Response
+sfaint Response
+include::{snippets}/list-sfaint/http-response.adoc[]
+
+
+

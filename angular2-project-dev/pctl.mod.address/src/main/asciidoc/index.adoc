@@ -1,0 +1,65 @@
+include::intro.adoc[]
+
+[[resources]]
+= Resources
+
+[[resources-civicAddressValidation]]
+=== Creating Civic Address
+A `Civic Address` request creates a new post.
+
+include::{snippets}/civicAddressValidation/response-fields.adoc[]
+
+==== Civic Address request
+
+include::{snippets}/civicAddressValidation/curl-request.adoc[]
+
+==== Civic Address response
+
+include::{snippets}/civicAddressValidation/http-response.adoc[]
+
+
+[[resources-invalidCivicAddress]]
+=== Creating Invalid Civic Address
+A `Invalid Civic Address` request creates a new post.
+
+include::{snippets}/invalidCivicAddress/response-fields.adoc[]
+
+====  Invalid Civic Address request
+
+include::{snippets}/invalidCivicAddress/curl-request.adoc[]
+
+====  Invalid Civic Address response
+
+include::{snippets}/invalidCivicAddress/http-response.adoc[]
+
+
+
+[[resources-postalAddressValidation]]
+
+=== Creating Postal Address
+A `Postal Address` request creates a new post.
+
+include::{snippets}/postalAddressValidation/response-fields.adoc[]
+
+==== Postal Address request
+
+include::{snippets}/postalAddressValidation/curl-request.adoc[]
+
+==== Postal Address response
+
+include::{snippets}/postalAddressValidation/http-response.adoc[]
+
+
+[[resources-invalidPostalAddress]]
+=== Creating Invalid Postal Address
+A `Invalid Postal Address` request creates a new post.
+
+include::{snippets}/invalidPostalAddress/response-fields.adoc[]
+
+====  Invalid Postal Address request
+
+include::{snippets}/invalidPostalAddress/curl-request.adoc[]
+
+====  Invalid Postal Address response
+
+include::{snippets}/invalidPostalAddress/http-response.adoc[]

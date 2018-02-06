@@ -1,0 +1,9 @@
+.required-ast{
+    color:red;
+}
+.no-padding-left{
+      padding-left:0 !important;
+}
+.hide-on-check{
+    display: none;
+}

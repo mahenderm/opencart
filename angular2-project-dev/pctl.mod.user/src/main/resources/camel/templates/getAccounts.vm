@@ -1,0 +1,39 @@
+      <getAccounts xmlns="http://ecaps.ctl.com/service/account">
+         <accountRequest>
+         
+            <entitlement>
+            
+               <enterpriseId>?</enterpriseId>
+            
+               <userId>?</userId>
+            </entitlement>
+         
+            <filterExpression>
+               <!--Zero or more repetitions:-->
+               <conditions>
+               
+                  <conditionalOperator>?</conditionalOperator>
+               
+                  <filter/>
+               
+                  <ignoreCase>?</ignoreCase>
+               </conditions>
+               <!--Zero or more repetitions:-->
+               <expression/>
+            
+               <operator>?</operator>
+            </filterExpression>
+         
+            <pageData>
+               <blockSize>?</blockSize>
+               <!--Zero or more repetitions:-->
+               <sortData>
+               
+                  <sortColumn>?</sortColumn>
+               
+                  <sortDirection>?</sortDirection>
+               </sortData>
+               <startIndex>?</startIndex>
+            </pageData>
+         </accountRequest>
+      </getAccounts>

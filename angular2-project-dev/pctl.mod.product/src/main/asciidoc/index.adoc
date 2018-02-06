@@ -1,0 +1,35 @@
+include::intro.adoc[]
+
+[[resources]]
+= Resources
+
+[[resources-Products]]
+== Products
+The Product resource is used to list.
+include::{snippets}/list-products/response-fields.adoc[]
+[[resources-Products-Request]]
+=== Product request
+Product Request
+include::{snippets}/list-products/curl-request.adoc[]
+[[resources-Products-Response]]
+=== Product Response
+Product Response
+include::{snippets}/list-products/http-response.adoc[]
+
+
+[[resources]]
+= Resources
+
+[[resources-/products/price/]
+== Price
+The Price resource is used to list.
+include::{snippets}/list-price/response-fields.adoc[]
+[[resources-Price-Request]]
+=== Price request
+Price Request
+include::{snippets}/list-price/curl-request.adoc[]
+[[resources-Price-Response]]
+=== Price Response
+Price Response
+include::{snippets}/list-price/http-response.adoc[]
+

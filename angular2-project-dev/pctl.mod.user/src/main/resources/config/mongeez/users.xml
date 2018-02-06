@@ -1,0 +1,219 @@
+<mongoChangeLog>
+    <changeSet changeId="ChangeSet-2" author="pctl">
+        <script>
+            db.users.insert(
+            {
+            "_class" : "com.centurylink.pctl.mod.auth.domain.user.User",
+            "login" : "jbeginsamuel@gmail.com",
+            "password" : "qwertyqwertyuiopasdfghjklzxcvbnml",
+            "first_name" : "jbeginsamuel@gmail.com",
+            "last_name" : "User",
+            "email" : "jbeginsamuel@gmail.com",
+            "activated" : "1",
+            "authorities" : [{
+            "name" : "ROLE_USER"
+            },
+            {
+            "name" : "ROLE_ADMIN"
+            }
+            ]
+            });
+        </script>
+    </changeSet>
+
+<changeSet changeId="ChangeSet-3" author="pctl">
+<script>
+    db.users.insert( {
+    "login": "gmail@gmail.com",
+    "password": "qwertyqwertyuiopasdfghjklzxcvbnml",
+    "first_name": "gmail@gmail.com",
+    "last_name": "User",
+    "email": "gmail@gmail.com",
+    "activated": "1",
+    "authorities": [
+    {
+    "name": "ROLE_USER"
+    },
+    {
+    "name": "ROLE_ADMIN"
+    }
+    ],
+    "cartHist": [
+    {
+    "shoppingCartId": "gmail@gmail.com2016-11-07 12:40:19.67",
+    "cartItemCount": 5,
+    "cartStatus": "Y"
+    },
+
+    ],
+    "cartInfo": {
+    "shoppingCartId": "gmail@gmail.com2016-11-07 12:40:19.67",
+    "cartItemCount": 5,
+    "cartStatus": "Y"
+    },
+    "authToken": "",
+    "fingerPrint": null
+    });
+</script>
+</changeSet>
+    <changeSet changeId="ChangeSet-4" author="pctl">
+        <script>
+            db.users.drop();
+            db.users.insert( {
+            "login": "tshuku@gmail.com",
+            "password": "qwertyqwertyuiopasdfghjklzxcvbnml",
+            "first_name": "Tarun ",
+            "last_name": " Kumar",
+            "email": "tshuku@gmail.com",
+            "activated": "1",
+            "authorities": [
+            {
+            "name": "ROLE_USER"
+            },
+            {
+            "name": "ROLE_ADMIN"
+            }
+            ],
+            "cartHist": [],
+            "authToken": "",
+            "fingerPrint": null
+            });
+        </script>
+    </changeSet>
+
+    <changeSet changeId="ChangeSet-5" author="pctl">
+        <script>
+            db.users.drop();
+            db.users.insert( {
+            "login": "tshuku@gmail.com",
+            "password": "qwertyqwertyuiopasdfghjklzxcvbnml",
+            "first_name": "Tarun ",
+            "last_name": " Kumar",
+            "email": "tshuku@gmail.com",
+            "activated": "1",
+            "authorities": [
+            {
+            "name": "ROLE_USER"
+            },
+            {
+            "name": "ROLE_ADMIN"
+            }
+            ],
+            "cartInfo": {
+            "shoppingCartId": "Test1ID",
+            "cartState": "0",
+            },
+            "authToken": "",
+            "fingerPrint": null
+            });
+        </script>
+    </changeSet>
+
+    <changeSet changeId="ChangeSet-6" author="pctl">
+        <script>
+            db.users.drop();
+            db.users.insert( {
+            "login": "tshuku@gmail.com",
+            "password": "qwertyqwertyuiopasdfghjklzxcvbnml",
+            "first_name": "Tarun ",
+            "last_name": " Kumar",
+            "email": "tshuku@gmail.com",
+            "activated": "1",
+            "status": "Y",
+            "authorities": [
+            {
+            "name": "ROLE_USER"
+            },
+            {
+            "name": "ROLE_ADMIN"
+            }
+            ],
+            "cartInfo": {
+            "shoppingCartId": "Test1ID",
+            "cartState": "0",
+            },
+            "authToken": "",
+            "fingerPrint": null
+            });
+        </script>
+    </changeSet>
+
+    <changeSet changeId="ChangeSet-7" author="pctl">
+        <script>
+            db.users.drop();
+            db.users.insert({
+            "login": "tshuku@gmail.com",
+            "password": "qwertyqwertyuiopasdfghjklzxcvbnml",
+            "first_name": "Tarun ",
+            "last_name": " Kumar",
+            "email": "tshuku@gmail.com",
+            "activated": "1",
+            "status": "Y",
+            "authorities": [{
+            "name": "ROLE_USER"
+            }, {
+            "name": "ROLE_ADMIN"
+            }],
+            "cartInfo": {
+            "shoppingCartId": "testId",
+            "cartState": "1"
+            },
+            "orderInfo": {
+            "orderId": "test_order_id",
+            "cartId": "testId",
+            "state": 0,
+            "orderDate": "29/11/2016",
+            "productInfo": [{
+            "product": "SD WAN",
+            "locationSize": 0
+            }]
+            },
+            "authToken": "",
+            "fingerPrint": null
+            });
+        </script>
+    </changeSet>
+
+
+    <changeSet changeId="ChangeSet-8" author="pctl">
+        <script>
+            db.users.drop();
+            db.users.insert( {
+            "login": "tshuku@gmail.com",
+            "password": "qwertyqwertyuiopasdfghjklzxcvbnml",
+            "first_name": "Tarun ",
+            "last_name": " Kumar",
+            "email": "tshuku@gmail.com",
+            "activated": "1",
+            "status": "Y",
+            "authorities": [
+            {
+            "name": "ROLE_USER"
+            },
+            {
+            "name": "ROLE_ADMIN"
+            }
+            ],
+            "cartInfo": {
+            "shoppingCartId": "testId",
+            "cartState": "1"
+            },
+            "orderInfo" : {
+            "orderId" : "test_order_id",
+            "cartId" : "testId",
+            "state" : "1",
+            "orderDate" : "29/11/2016",
+            "productInfo" : [
+            {
+            "product" : "SD WAN",
+            "locationSize" : 2
+            }
+            ]
+            },
+            "authToken": "",
+            "fingerPrint": null
+            });
+        </script>
+    </changeSet>
+
+</mongoChangeLog>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:int-mongodb="http://www.springframework.org/schema/integration/mongodb"
+       xmlns:jms="http://www.springframework.org/schema/integration/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/integration
+		http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration/mongodb
+		http://www.springframework.org/schema/integration/mongodb/spring-integration-mongodb.xsd
+		http://www.springframework.org/schema/integration/jms
+		http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd" >
+
+  <bean id="userDestinationQueue" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg index="0" value="${spring.activemq.user-queue}" />
+  </bean>
+  <bean id="cartDestination" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg index="0" value="${spring.activemq.cart-queue}" />
+  </bean>
+  <bean id="defaultDestination" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg index="0" value="${spring.activemq.default-queue}" />
+  </bean>
+  <bean id="orderDestinationQueue" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg index="0" value="${spring.activemq.order-queue}" />
+  </bean>
+  <bean id="sfaintDestinationQueue" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg index="0" value="${spring.activemq.sfaint-queue}" />
+  </bean>
+
+  <bean id="amqConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+    <constructor-arg index="0" value="${spring.activemq.broker-url}"/>
+    <!--<constructor-arg index="0" value="tcp://localhost:61616"/>-->
+    <property name="trustAllPackages" value="true"/>
+  </bean>
+
+  <!-- ConnectionFactory Definition -->
+  <bean id="connectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
+    <constructor-arg ref="amqConnectionFactory" />
+  </bean>
+
+  <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+    <property name="connectionFactory" ref="connectionFactory" />
+    <property name="defaultDestination" ref="defaultDestination" />
+  </bean>
+
+
+  <bean id="transactionManager"
+        class="org.springframework.jms.connection.JmsTransactionManager">
+    <constructor-arg index="0" ref="connectionFactory"/>
+  </bean>
+
+
+  <bean id="listener"
+        class="com.centurylink.pctl.mod.ui.jms.MyMessageListener">
+  </bean>
+  <bean id="ErrorHandler"
+        class="com.centurylink.pctl.mod.ui.jms.ErrorHandlerAmq">
+  </bean>
+  <bean id="userMessageConverter"
+        class="com.centurylink.pctl.mod.ui.jms.UserMessageConverter" >
+  </bean>
+
+
+  <jms:message-driven-channel-adapter id="EventMessageDrivenChannelAdapter" acknowledge="transacted"
+                                        auto-startup="true" connection-factory="connectionFactory"
+                                        destination="defaultDestination"
+                                        channel="inputChannel"
+                                        concurrent-consumers="2"
+                                        max-concurrent-consumers="10" transaction-manager="transactionManager" />
+
+  <int:channel id="inputChannel"/>
+
+  <int:splitter input-channel="inputChannel" output-channel="routingChannel"/>
+
+  <int:channel id="routingChannel"/>
+
+  <int:recipient-list-router id="customRouter" input-channel="routingChannel"
+                             timeout="3000"
+                             ignore-send-failures="false"
+                             apply-sequence="true">
+     <int:recipient channel="cartActiveMQOutboundChannel"
+                   selector-expression="payload.header.name.equals('CART_EVENTS')"/>
+     <int:recipient channel="userActiveMQOutboundChannel"
+                   selector-expression="payload.header.name.equals('CART-INIT')"/>
+     <int:recipient channel="orderActiveMQOutboundChannel"
+                   selector-expression="payload.header.name.equals('ORDER_EVENTS')"/>
+    <int:recipient channel="sfaintActiveMQOutboundChannel"
+                   selector-expression="payload.header.name.equals('SFAINT')"/>
+  </int:recipient-list-router>
+
+  <int:channel id="userActiveMQOutboundChannel"/>
+  <int:channel id="cartActiveMQOutboundChannel"/>
+  <int:channel id="orderActiveMQOutboundChannel"/>
+  <int:channel id="sfaintActiveMQOutboundChannel"/>
+
+  <jms:outbound-channel-adapter id="userActiveMQOutboundAdapter" message-converter="userMessageConverter"
+                                channel="userActiveMQOutboundChannel" connection-factory="connectionFactory"
+                                destination="userDestinationQueue"/>
+  <jms:outbound-channel-adapter id="cartActiveMQOutboundAdapter" message-converter="userMessageConverter"
+                                channel="cartActiveMQOutboundChannel" connection-factory="connectionFactory"
+                                destination="cartDestination"/>
+  <jms:outbound-channel-adapter id="orderActiveMQOutboundAdapter" message-converter="userMessageConverter"
+                                channel="orderActiveMQOutboundChannel" connection-factory="connectionFactory"
+                                destination="orderDestinationQueue"/>
+  <jms:outbound-channel-adapter id="sfaintActiveMQOutboundAdapter" message-converter="userMessageConverter"
+                                channel="sfaintActiveMQOutboundChannel" connection-factory="connectionFactory"
+                                destination="sfaintDestinationQueue"/>
+
+  <int:service-activator input-channel="errorChannel" ref="ErrorHandler" method="handleError"/>
+  <int:service-activator input-channel="loggerChannel" ref="listener"  output-channel="nullChannel" method="onHandle"  />
+
+
+</beans>

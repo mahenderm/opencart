@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <soapEndPoints>
+        <soapEndPoint id="checkForUser">
+            <serviceName>checkForUser</serviceName>
+            <velocityTemplate>camel/templates/checkForUser.vm</velocityTemplate>
+            <serviceEndPoint>http://DS-FKXNWQ1:8088/mockUserAdminServiceSoapBinding</serviceEndPoint>
+            <soapAction>http://DS-FKXNWQ1:8088/mockUserAdminServiceSoapBinding/checkForUser</soapAction>
+            <baseXPath>/</baseXPath>
+            <!--<baseXPath>/user:checkForUserResponse</baseXPath>-->
+            <secondaryXPath>Test</secondaryXPath>
+            <namespace>
+                <prefix>ser</prefix>
+                <uri>http://ecaps.ctl.com/serviceObject</uri>
+            </namespace>
+            <namespace>
+                <prefix>user</prefix>
+                <uri>http://ecaps.ctl.com/service/userAdmin</uri>
+            </namespace>
+            <!--<unmarshalClass>com.centurylink.pctl.mod.user.domain.camel.TempetaureVO</unmarshalClass>-->
+            <!--<unmarshalClass>com.centurylink.pctl.mod.user.domain.camel.UserEnterpriseDataSO</unmarshalClass>-->
+
+            <unmarshalClass>com.centurylink.pctl.mod.user.domain.camel.CheckForUserResponse</unmarshalClass>
+
+            <unmarshalField>user:checkForUserResponse</unmarshalField>
+        </soapEndPoint>
+        <soapEndPoint id="createEnterprise">
+            <serviceName>createEnterprise</serviceName>
+            <velocityTemplate>camel/templates/createEnterprise.vm</velocityTemplate>
+            <serviceEndPoint>http://DS-FKXNWQ1:5000/mockEnterpriseAdminServiceSoapBinding</serviceEndPoint>
+            <soapAction>http://DS-FKXNWQ1:5000/mockUserAdminServiceSoapBinding/createEnterprise</soapAction>
+            <!--<baseXPath>/ent:createEnterpriseResponse/ent:return</baseXPath>-->
+            <baseXPath>/ent:createEnterpriseResponse</baseXPath>
+            <!--<baseXPath>/ent:getEnterpriseResponse</baseXPath>-->
+            <secondaryXPath>Test</secondaryXPath>
+            <namespace>
+                <prefix>ent</prefix>
+                <uri>http://ecaps.ctl.com/service/enterpriseAdmin</uri>
+            </namespace>
+            <namespace>
+                <prefix>soapenv</prefix>
+                <uri>http://schemas.xmlsoap.org/soap/envelope/</uri>
+            </namespace>
+            <unmarshalClass>com.centurylink.pctl.mod.user.domain.camel.CreateEnterpriseResponse</unmarshalClass>
+            <unmarshalField>/ent:return</unmarshalField>
+        </soapEndPoint>
+
+        <soapEndPoint id="assignAccountsToUser">
+            <serviceName>assignAccountsToUser</serviceName>
+            <velocityTemplate>camel/templates/assignAccountsToUser.vm</velocityTemplate>
+            <!--<serviceEndPoint>http://DS-DWVNWQ1:8088/mockAccountServiceSoapBinding</serviceEndPoint>
+            <soapAction>http://DS-DWVNWQ1:8088/mockAccountServiceSoapBinding/assignAccountsToUser</soapAction>-->
+            <serviceEndPoint>http://DS-FKXNWQ1:4039/mockAccountServiceSoapBinding</serviceEndPoint>
+            <soapAction>http://DS-FKXNWQ1:4039/mockAccountServiceSoapBinding/assignAccountsToUser</soapAction>
+
+            <!--<baseXPath>/ent:createEnterpriseResponse/ent:return</baseXPath>-->
+            <baseXPath>/acc:assignAccountsToUserResponse</baseXPath>
+            <!--<baseXPath>/ent:getEnterpriseResponse</baseXPath>-->
+            <secondaryXPath>Test</secondaryXPath>
+            <namespace>
+                <prefix>acc</prefix>
+                <uri>http://ecaps.ctl.com/service/account</uri>
+            </namespace>
+            <namespace>
+                <prefix>ser</prefix>
+                <uri>http://ecaps.ctl.com/serviceObject</uri>
+            </namespace>
+            <namespace>
+                <prefix>soapenv</prefix>
+                <uri>http://schemas.xmlsoap.org/soap/envelope/</uri>
+            </namespace>
+            <unmarshalClass>com.centurylink.pctl.mod.user.domain.camel.AssignAccountsToUserResponse</unmarshalClass>
+            <unmarshalField>/ent:return</unmarshalField>
+        </soapEndPoint>
+
+
+    <soapEndPoint id="getAccounts">
+        <serviceName>getAccounts</serviceName>
+        <velocityTemplate>camel/templates/getAccounts.vm</velocityTemplate>
+        <serviceEndPoint>http://DS-DWVNWQ1:1009/mockAccountServiceSoapBinding</serviceEndPoint>
+        <soapAction>http://DS-DWVNWQ1:1009/mockAccountServiceSoapBinding/getAccounts</soapAction>
+        <baseXPath>/acc:getAccountsResponse</baseXPath>
+
+        <secondaryXPath>Test</secondaryXPath>
+        <namespace>
+            <prefix>acc</prefix>
+            <uri>http://ecaps.ctl.com/service/account</uri>
+        </namespace>
+        <namespace>
+            <prefix>ser</prefix>
+            <uri>http://ecaps.ctl.com/serviceObject</uri>
+        </namespace>
+        <namespace>
+            <prefix>soapenv</prefix>
+            <uri>http://schemas.xmlsoap.org/soap/envelope/</uri>
+        </namespace>
+        <unmarshalClass>com.centurylink.pctl.mod.user.domain.camel.GetAccountsResponse</unmarshalClass>
+        <unmarshalField>/acc:return</unmarshalField>
+    </soapEndPoint>
+
+    <soapEndPoint id="getAccountDetailById">
+        <serviceName>getAccountDetailById</serviceName>
+        <velocityTemplate>camel/templates/getAccountDetailById.vm</velocityTemplate><!--
+            <serviceEndPoint>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding</serviceEndPoint>
+            <soapAction>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding/getUserEnterprises</soapAction>
+-->
+        <serviceEndPoint>http://DS-DWVNWQ1:1009/mockAccountServiceSoapBinding</serviceEndPoint>
+        <soapAction>http://DS-DWVNWQ1:1009/mockAccountServiceSoapBinding/getAccountDetailById</soapAction>
+
+        <baseXPath>/acc:getAccountDetailByIdResponse</baseXPath>
+
+        <secondaryXPath>Test</secondaryXPath>
+        <namespace>
+            <prefix>acc</prefix>
+            <uri>http://ecaps.ctl.com/service/account</uri>
+        </namespace>
+        <namespace>
+            <prefix>ser</prefix>
+            <uri>http://ecaps.ctl.com/serviceObject</uri>
+        </namespace>
+        <namespace>
+            <prefix>soapenv</prefix>
+            <uri>http://schemas.xmlsoap.org/soap/envelope/</uri>
+        </namespace>
+        <unmarshalClass>com.centurylink.pctl.mod.user.domain.camel.GetAccountDetailByIdResponse</unmarshalClass>
+        <unmarshalField>/acc:return</unmarshalField>
+    </soapEndPoint>
+
+
+
+    <soapEndPoint id="getUserEnterprises">
+        <serviceName>getUserEnterprises</serviceName>
+        <velocityTemplate>camel/templates/getUserEnterprises.vm</velocityTemplate><!--
+            <serviceEndPoint>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding</serviceEndPoint>
+            <soapAction>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding/getUserEnterprises</soapAction>
+-->
+        <serviceEndPoint>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding</serviceEndPoint>
+        <soapAction>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding/getUserEnterprises</soapAction>
+        <!--<baseXPath>/ent:createEnterpriseResponse/ent:return</baseXPath>-->
+        <baseXPath>/user:getUserEnterprisesResponse</baseXPath>
+        <!--<baseXPath>/ent:getEnterpriseResponse</baseXPath>-->
+        <secondaryXPath>Test</secondaryXPath>
+        <namespace>
+            <prefix>user</prefix>
+            <uri>http://ecaps.ctl.com/service/userAdmin</uri>
+        </namespace>
+        <namespace>
+            <prefix>ser</prefix>
+            <uri>http://ecaps.ctl.com/serviceObject</uri>
+        </namespace>
+        <namespace>
+            <prefix>soapenv</prefix>
+            <uri>http://schemas.xmlsoap.org/soap/envelope/</uri>
+        </namespace>
+        <unmarshalClass>com.centurylink.pctl.mod.user.domain.camel.GetUserEnterprisesResponse</unmarshalClass>
+        <unmarshalField>/user:return</unmarshalField>
+    </soapEndPoint>
+
+
+    <soapEndPoint id="getUserByUsername">
+        <serviceName>getUserByUsername</serviceName>
+        <velocityTemplate>camel/templates/getUserByUsername.vm</velocityTemplate><!--
+            <serviceEndPoint>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding</serviceEndPoint>
+            <soapAction>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding/getUserEnterprises</soapAction>
+-->
+        <serviceEndPoint>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding</serviceEndPoint>
+        <soapAction>http://DS-DWVNWQ1:1039/mockUserAdminServiceSoapBinding/getUserByUsername</soapAction>
+
+
+        <baseXPath>/user:getUserByUsernameResponse</baseXPath>
+        <!--<baseXPath>/ent:getEnterpriseResponse</baseXPath>-->
+        <secondaryXPath>Test</secondaryXPath>
+        <namespace>
+            <prefix>user</prefix>
+            <uri>http://ecaps.ctl.com/service/userAdmin</uri>
+        </namespace>
+        <namespace>
+            <prefix>ser</prefix>
+            <uri>http://ecaps.ctl.com/serviceObject</uri>
+        </namespace>
+        <namespace>
+            <prefix>soapenv</prefix>
+            <uri>http://schemas.xmlsoap.org/soap/envelope/</uri>
+        </namespace>
+        <unmarshalClass>com.centurylink.pctl.mod.user.domain.camel.GetUserByUsernameResponse</unmarshalClass>
+        <unmarshalField>/user:return</unmarshalField>
+    </soapEndPoint>
+
+    </soapEndPoints>
+
+
+
+</config>

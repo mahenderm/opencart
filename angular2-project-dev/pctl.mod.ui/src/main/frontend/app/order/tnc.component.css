@@ -1,0 +1,19 @@
+#Terms button svg 
+{
+	width:100px;
+	height:200px;
+}
+/* T&C */
+#Terms .SdWan
+{
+	color:#666;
+}
+#Terms  button svg use
+{
+	fill:#666;
+}
+
+#Proceed
+{
+	margin:20px 0px 20px 0px;
+}

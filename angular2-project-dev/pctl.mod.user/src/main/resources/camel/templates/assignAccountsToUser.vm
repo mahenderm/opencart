@@ -1,0 +1,7 @@
+ <assignAccountsToUser xmlns="http://ecaps.ctl.com/service/account">
+         <userId>?</userId>        
+         <accounts xmlns="http://ecaps.ctl.com/service/account">           
+            <accountId xmlns="http://ecaps.ctl.com/serviceObject">?</accountId>           
+            <accountSystemCode xmlns="http://ecaps.ctl.com/serviceObject">?</accountSystemCode>
+         </accounts>
+ </assignAccountsToUser>

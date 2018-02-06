@@ -1,0 +1,98 @@
+<breadcrumb [breadcrumbs]="(user | async)?.breadcrumbs" [homePage]='false'></breadcrumb>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="text-success">
+        <svg class="cyclops-icon md">
+          <use xlink:href="#icon-phone"></use>
+        </svg> Contact Us</h2>
+    </div>
+  </div>
+  <div class="card" *ngIf="(user | async)?.breadcrumbs[(user | async)?.breadcrumbs.length-1]?.from === 'ctl'">
+    <div class="card-block">
+      <div class="row">
+        <div class="col-sm-6">
+          <h4 class="text-success">{{(user | async)?.status.name}} <small class="deemphasize"> ({{(user | async)?.status.term}} months, {{(user | async)?.status.transport}})</small></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-danger" *ngIf="billingValid && (billingResponse && billingResponse.code === '400')">
+      <ul>
+        <li>{{billingResponse.message}}</li>
+      </ul>
+  </div>
+  <section>
+    <div class="row">
+      <div class="col-md-12 text-right">
+        <small><span class="text-danger">*</span> Indicates Mandatory Field</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9">
+        <form [formGroup]="form" (ngSubmit)="contactUs()" class="form-horizontal">
+          <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">First Name <span class="text-danger">*</span></label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="firstName" formControlName="firstName">
+              <control-messages [control]="form.controls.firstName"></control-messages>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastName" class="col-sm-3 control-label">Last Name <span class="text-danger">*</span></label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="lastName" formControlName="lastName">
+              <control-messages [control]="form.controls.lastName"></control-messages>
+            </div>
+          </div>
+          
+          <div class="form-group">
+                  <label for="primaryPhone" class="col-sm-3 control-label">Primary Phone <span class="text-danger">*</span></label>
+                  <div class="col-sm-3">
+                    <input type="tel" class="form-control" id="primaryPhone" formControlName="primaryPhone" [textMask]="{mask: phoneMask}" placeholder="(XXX) XXX-XXXX">
+              <control-messages [control]="form.controls.primaryPhone"></control-messages>
+                  </div>
+				      <label for="Extn" class="col-sm-1 control-label">Extn</label>
+                  <div class="col-sm-2">
+                    <input type="tel" [textMask]="{mask: phoneExtnMask}" class="form-control" id="primaryPhoneExtn" formControlName="primaryPhoneExtn">
+                  </div>
+                </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-3 control-label">Email <span class="text-danger">*</span></label>
+            <div class="col-sm-9">
+              <input type="email" class="form-control" id="email" formControlName="email">
+              <control-messages [control]="form.controls.email"></control-messages>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="companyName" class="col-sm-3 control-label">Company Name</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="companyName" formControlName="companyName">
+              <!--<control-messages [control]="form.controls.companyName"></control-messages>-->
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="jobTitle" class="col-sm-3 control-label">Job Title</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="jobTitle" formControlName="jobTitle">
+              <!--<control-messages [control]="form.controls.jobTitle"></control-messages>-->
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comments" class="col-sm-3 control-label">Comments</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" rows="5" id="comments" formControlName="comments">
+              </textarea>
+              <!--<control-messages [control]="form.controls.comments"></control-messages>-->
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-9 col-sm-push-3">
+              <button type="submit" class="btn btn-primary btn-lg" [disabled]="!form.valid">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>

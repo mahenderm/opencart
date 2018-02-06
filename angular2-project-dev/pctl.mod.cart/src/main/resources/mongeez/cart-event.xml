@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mongoChangeLog>
+    <changeSet changeId="ChangeSet-1" author="pctl">
+        <script>
+            db.cart_events.drop();
+            db.cart_events.insert(
+            [{
+            "cartId":"cart1",
+            "cartEventType" : "ADD_ITEM",
+            "productId" : "sdwan1000",
+            "quantity" : 1,
+            "productName" : "SD WAN",
+            "productTemplateName":"SD WAN BASIC",
+            "productTemplateId" : "sdwanbasic",
+            "unitPrice" : "200.00"
+
+            },{
+            "cartId":"cart2",
+            "cartEventType" : "ADD_ITEM",
+            "productId" : "sdwan2000",
+            "quantity" : 1,
+            "productName" : "SD WAN",
+            "productTemplateName":"SD WAN BASIC",
+            "productTemplateId" : "sdwanbasic",
+            "unitPrice" : "200.00"
+            },{
+            "cartId":"cart1",
+            "cartEventType": "ADD_LOCATION",
+            "productTemplateId" : "sdwanbasic",
+            "location":{
+            "id" : "address1",
+            "serviceAddress": {
+            "locationName": "ETA TECH PARK - Service Address 77777",
+            "address": "Navlur",
+            "street": "OMR-3",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "shippingAddress": {
+            "locationName": "ETA TECH PARK - Shipping Address 77777",
+            "address": "Navlur",
+            "street": "OMR-4",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "serviceContact": {
+            "email" : "kiran123@gmail.com",
+            "firstName" : "Venkata Kiran",
+            "lastName" :  "N G",
+            "phoneNumber" :  "+91-23293434343"
+            }
+            }
+            },{
+            "cartId":"cart1",
+            "cartEventType": "ADD_LOCATION",
+            "productTemplateId" : "sdwanbasic",
+            "location":{
+            "id" : "address2",
+            "serviceAddress": {
+            "locationName": "ETA TECH PARK - Service Address 77777",
+            "address": "Navlur",
+            "street": "OMR-3",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "shippingAddress": {
+            "locationName": "ETA TECH PARK - Shipping Address 77777",
+            "address": "Navlur",
+            "street": "OMR-4",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "serviceContact": {
+            "email" : "kiran123@gmail.com",
+            "firstName" : "Venkata Kiran",
+            "lastName" :  "N G",
+            "phoneNumber" :  "+91-23293434343"
+            }
+            }
+            }]);
+        </script>
+    </changeSet>
+    <changeSet changeId="ChangeSet-2" author="pctl">
+        <script>
+            db.cart_events.drop();
+            db.cart_events.insert(
+            [{
+            "cartId":"cart1234567",
+            "cartEventType" : "ADD_ITEM",
+            "productId" : "sdwan1000",
+            "quantity" : 1,
+            "productName" : "SD WAN",
+            "productTemplateName":"SD WAN BASIC",
+            "productTemplateId" : "sdwanbasic",
+            "unitPrice" : "200.00"
+
+            },{
+            "cartId":"cart234567",
+            "cartEventType" : "ADD_ITEM",
+            "productId" : "sdwan2000",
+            "quantity" : 1,
+            "productName" : "SD WAN",
+            "productTemplateName":"SD WAN BASIC",
+            "productTemplateId" : "sdwanbasic",
+            "unitPrice" : "200.00"
+            },{
+            "cartId":"cart1234567",
+            "cartEventType": "ADD_LOCATION",
+            "productTemplateId" : "sdwanbasic",
+            "location":{
+            "id" : "address1",
+            "serviceAddress": {
+            "locationName": "ETA TECH PARK - Service Address 77777",
+            "addressLine": "Navlur",
+            "street": "OMR-3",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "shippingAddress": {
+            "locationName": "ETA TECH PARK - Shipping Address 77777",
+            "addressLine": "Navlur",
+            "street": "OMR-4",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "serviceContact": {
+            "email" : "kiran123@gmail.com",
+            "firstName" : "Venkata Kiran",
+            "lastName" :  "N G",
+            "phoneNumber" :  "+91-23293434343"
+            }
+            }
+            },{
+            "cartId":"cart1234567",
+            "cartEventType": "ADD_LOCATION",
+            "productTemplateId" : "sdwanbasic",
+            "location":{
+            "id" : "address2",
+            "serviceAddress": {
+            "locationName": "ETA TECH PARK - Service Address 77777",
+            "addressLine": "Navlur",
+            "street": "OMR-3",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "shippingAddress": {
+            "locationName": "ETA TECH PARK - Shipping Address 77777",
+            "addressLine": "Navlur",
+            "street": "OMR-4",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "serviceContact": {
+            "email" : "kiran123@gmail.com",
+            "firstName" : "Venkata Kiran",
+            "lastName" :  "N G",
+            "phoneNumber" :  "+91-23293434343"
+            }
+            }
+            }]);
+        </script>
+    </changeSet>
+    <changeSet changeId="ChangeSet-3" author="pctl">
+        <script>
+            db.cart_events.drop();
+            db.cart_events.insert(
+            [{
+            "cartId":"cart1234567",
+            "cartEventType" : "ADD_ITEM",
+            "productId" : "sdwan1000",
+            "quantity" : 1,
+            "productName" : "SD WAN",
+            "productTemplateName":"SD WAN BASIC",
+            "productTemplateId" : "sdwanbasic",
+            "unitPrice" : "200.00",
+            "term" : "12"
+
+            },{
+            "cartId":"cart234567",
+            "cartEventType" : "ADD_ITEM",
+            "productId" : "sdwan2000",
+            "quantity" : 1,
+            "productName" : "SD WAN",
+            "productTemplateName":"SD WAN BASIC",
+            "productTemplateId" : "sdwanbasic",
+            "unitPrice" : "200.00",
+            "term" : "24"
+            },{
+            "cartId":"cart1234567",
+            "cartEventType": "ADD_LOCATION",
+            "productTemplateId" : "sdwanbasic",
+            "location":{
+            "id" : "address1",
+            "serviceAddress": {
+            "locationName": "ETA TECH PARK - Service Address 77777",
+            "addressLine": "Navlur",
+            "street": "OMR-3",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "shippingAddress": {
+            "locationName": "ETA TECH PARK - Shipping Address 77777",
+            "addressLine": "Navlur",
+            "street": "OMR-4",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "serviceContact": {
+            "email" : "kiran123@gmail.com",
+            "firstName" : "Venkata Kiran",
+            "lastName" :  "N G",
+            "phoneNumber" :  "+91-23293434343"
+            }
+            }
+            },{
+            "cartId":"cart1234567",
+            "cartEventType": "ADD_LOCATION",
+            "productTemplateId" : "sdwanbasic",
+            "location":{
+            "id" : "address2",
+            "serviceAddress": {
+            "locationName": "ETA TECH PARK - Service Address 77777",
+            "addressLine": "Navlur",
+            "street": "OMR-3",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "shippingAddress": {
+            "locationName": "ETA TECH PARK - Shipping Address 77777",
+            "addressLine": "Navlur",
+            "street": "OMR-4",
+            "country": "India222222",
+            "city": "Chennai",
+            "state":"state",
+            "zipCode":"6050011"
+            },
+            "serviceContact": {
+            "email" : "kiran123@gmail.com",
+            "firstName" : "Venkata Kiran",
+            "lastName" :  "N G",
+            "phoneNumber" :  "+91-23293434343"
+            }
+            }
+            }]);
+        </script>
+    </changeSet>
+</mongoChangeLog>

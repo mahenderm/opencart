@@ -1,0 +1,647 @@
+{
+  "user": {
+    "id": 1,
+    "email": "arif@hcl.com",
+    "loggedIn": true,
+    "login": "arif@hcl.com",
+    "firstName": "Arif ",
+    "lastName": " Khan",
+    "phoneNumber": "123123-123",
+    "companyName": "CTL1452541",
+    "einNumber": "EIN1456258",
+    "orderHistory": [
+      {
+        "orderId": "7a7a8977-25ee-4f9a-b34d-0d35f24e6a86",
+        "cartId": "28-11-2016-1st",
+        "state": 0,
+        "orderDate": "29/11/2016",
+        "productInfo": [
+          {
+            "product": "SD WAN BASIC",
+            "locationSize": 2,
+            "price": 100
+          },
+          {
+            "product": "SD WAN BASIC HA",
+            "locationSize": 4,
+            "price": 100
+          }
+        ]
+      },
+      {
+        "orderId": "2448fc8e-b763-462e-b777-5cce73e180d1",
+        "cartId": "28-11-2016-1st",
+        "state": 0,
+        "orderDate": "29/11/2016",
+        "productInfo": [
+          {
+            "product": "SD WAN Premium",
+            "locationSize": 3,
+            "price": 100
+          },
+          {
+            "product": "SD WAN Premium HA",
+            "locationSize": 4,
+            "price": 100
+          }
+        ]
+      },
+      {
+        "orderId": "3b32abfc-9393-49dc-9c5b-0c7d796d6fbb",
+        "cartId": "28-11-2016-1st",
+        "state": 0,
+        "orderDate": "29/11/2016",
+        "productInfo": [
+          {
+            "product": "SD WAN",
+            "locationSize": 0,
+            "price": 100
+          }
+        ]
+      },
+      {
+        "orderId": "7a7a8977-25ee-4f9a-b34d-0d35f24e6a86",
+        "cartId": "28-11-2016-1st",
+        "state": 0,
+        "orderDate": "29/11/2016",
+        "productInfo": [
+          {
+            "product": "SD WAN",
+            "locationSize": 0,
+            "price": 100
+          }
+        ]
+      },
+      {
+        "orderId": "026c261f-a4e5-465e-ab4f-040035f6eddc",
+        "cartId": "28-11-2016-1st",
+        "state": 0,
+        "orderDate": "29/11/2016",
+        "productInfo": [
+          {
+            "product": "SD WAN",
+            "locationSize": 0,
+            "price": 100
+          }
+        ]
+      }
+    ]
+  },
+  "cart": {
+    "cartId": "ec776292-2d58-5d3f-354c-91f65ad5c817",
+    "cartEventType": "ADD_LOCATION",
+    "productTemplateId": "SDWANBASIC",
+    "location": {
+      "id": "10c91aef-3317-a2df-f269-d77b5986a670",
+      "serviceContact": {
+        "email": "fasdfa@gmail.com",
+        "firstName": "ASDADAD",
+        "lastName": "SADSAD",
+        "phoneNumber": "(454) 454-5454",
+        "phoneNumberExtn": "4545"
+      },
+      "serviceAddress": {
+        "locationName": "dsfsdf",
+        "addressLine": "sdfsdf",
+        "street": "dsfsdf",
+        "city": "sdfsdf",
+        "country": "USA",
+        "state": "IA",
+        "zipCode": "45455"
+      },
+      "shippingAddress": {
+        "checkAddress": true,
+        "locationName": "dsfsdf",
+        "addressLine": "sdfsdf",
+        "street": "dsfsdf",
+        "city": "sdfsdf",
+        "country": "USA",
+        "state": "IA",
+        "zipCode": "45455"
+      }
+    }
+  },
+  "addressVal": {
+    "checkAddress": true,
+    "locationName": "sdf",
+    "addressLine": "sdf",
+    "street": "sdf",
+    "city": "Monroe",
+    "country": "USA",
+    "state": "KS",
+    "zipCode": "11111"
+  },
+  "billingOrder": {
+    "orderId": 68575,
+    "orderEventType": "UPDATED",
+    "companyName": "Google",
+    "billingAddress": {
+      "addressLine": "Sunnyvale 111",
+      "street": "sdfsdf",
+      "country": "USA",
+      "state": "CA",
+      "city": "Sunnyvalue",
+      "zipCode": "11111"
+    }
+  },
+  "contactus": {
+    "firstName": "HCL",
+    "lastName": "Tech",
+    "primaryPhone": "(456) 456-4564",
+    "email": "test@test.com",
+    "companyName": "HCL Tech",
+    "jobTitle": "",
+    "comments": ""
+  },
+  "products": [
+    {
+      "id": 1,
+      "urnid": "sd-wan",
+      "name": "SD WAN",
+      "description": "<p>Protect your data across the public Internet with desktop virtual private network (VPN) software via a self-service, persistent network-to-network tunnel</p><br> <p>IPsec offers the ability to create persistent, secure tunnels across a public network. The CenturyLink Cloud supports connections between networks (“gateway to gateway”) as well as connections between users on untrusted networks and their secure applications (“host to gateway”). Users can quickly provision a site to site VPN via the self-service Control Portal.</p>",
+      "product_type": "Network",
+      "created_at": "2016-09-22T14:25:08-03:00",
+      "updated_at": "2016-09-22T14:25:08-03:00",
+      "display_scope": [
+        "web",
+        "mobile"
+      ],
+      "variants": [
+        {
+          "id": "08911238777814",
+          "product_id": 223322117656312,
+          "name": "SD-WAN BASIC",
+          "sku": "SDWANBASIC",
+          "created_at": "2016-09-22T13:34:03-02:00",
+          "updated_at": "2016-09-22T13:34:03-02:00",
+          "display_position": 4,
+          "service_plan": "basic",
+          "service_vendor": "versa",
+          "service_transport": "customer",
+          "security_pkg": "",
+          "standard_cpe": "1",
+          "ha_cpe": "",
+          "tier1_support": "1",
+          "ha_service_plan": "",
+          "ha_service_vendor": "",
+          "ha_service_transport": "",
+          "ha_security_pkg": "",
+          "_links": {
+            "self": {
+              "href": "http://localhost:4444/variants/08911238777814"
+            }
+          }
+        },
+        {
+          "id": "08911238777813",
+          "product_id": 223322117656312,
+          "name": "SD-WAN BASIC HA",
+          "sku": "SDWANBASICHA",
+          "created_at": "2016-09-22T13:34:03-02:00",
+          "updated_at": "2016-09-22T13:34:03-02:00",
+          "display_position": 3,
+          "service_plan": "basic",
+          "service_vendor": "versa",
+          "service_transport": "customer",
+          "security_pkg": "",
+          "standard_cpe": "1",
+          "ha_cpe": "1",
+          "tier1_support": "1",
+          "ha_service_plan": "basic",
+          "ha_service_vendor": "versa",
+          "ha_service_transport": "ctl",
+          "ha_security_pkg": "1",
+          "_links": {
+            "self": {
+              "href": "http://localhost:4444/variants/08911238777813"
+            }
+          }
+        },
+        {
+          "id": "08911238777812",
+          "product_id": 223322117656312,
+          "name": "SD-WAN PREMIUM",
+          "sku": "SDWANPREMIUM",
+          "created_at": "2016-09-22T13:34:03-02:00",
+          "updated_at": "2016-09-22T13:34:03-02:00",
+          "display_position": 2,
+          "service_plan": "premium",
+          "service_vendor": "versa",
+          "service_transport": "customer",
+          "security_pkg": "1",
+          "standard_cpe": "1",
+          "ha_cpe": "",
+          "tier1_support": "1",
+          "ha_service_plan": "",
+          "ha_service_vendor": "",
+          "ha_service_transport": "",
+          "ha_security_pkg": "0",
+          "_links": {
+            "self": {
+              "href": "http://localhost:4444/variants/08911238777812"
+            }
+          }
+        },
+        {
+          "id": "08911238777811",
+          "product_id": 223322117656312,
+          "name": "SD-WAN PREMIUM HA",
+          "sku": "SDWANPREMIUMHA",
+          "created_at": "2016-09-22T13:34:03-02:00",
+          "updated_at": "2016-09-22T13:34:03-02:00",
+          "display_position": 1,
+          "service_plan": "premium",
+          "service_vendor": "versa",
+          "service_transport": "customer",
+          "security_pkg": "1",
+          "standard_cpe": "1",
+          "ha_cpe": "1",
+          "tier1_support": "1",
+          "ha_service_plan": "premium",
+          "ha_service_vendor": "versa",
+          "ha_service_transport": "ctl",
+          "ha_security_pkg": "1",
+          "_links": {
+            "self": {
+              "href": "http://localhost:4444/variants/08911238777811"
+            }
+          }
+        }
+      ],
+      "_links": {
+        "self": {
+          "href": "http://localhost:4444/products/223322117656312"
+        }
+      }
+    }
+  ],
+  "productMS": {
+    "productId": "sdwan1000",
+    "name": "SD WAN",
+    "descriptionHtml": "Software-defined wide area networking (SD-WAN) is the next evolution of private networking. SD-WAN uses software to automate the ongoing configuration of edge routers and push traffic over a mix of private, wireless, and broadband network access.SD-WAN offers a real network solution for businesses trying to keep up with the impact a highly dynamic application environment has on their network quality of service. Our SD-WAN combines CenturyLink network design and management expertise with leading software controls and the ubiquity of any connection type or any vendor. The result is improved flexibility through greater bandwidth that delivers increased visibility into network usage and vastly simplified control. CenturyLink offers four popular configurations of SD-WAN as described below -- or a custom configuration can be set up via a sales agent.",
+    "displayImage": "",
+    "productType": "Network",
+    "createdAt": "2016-09-22T14:25:08-03:00",
+    "updatedAt": "2016-09-22T14:25:08-03:00",
+    "terms": [
+      {
+        "name": "12",
+        "frequency": "monthly",
+        "shortCode": "12m"
+      },
+      {
+        "name": "24",
+        "frequency": "monthly",
+        "shortCode": "24m"
+      },
+      {
+        "name": "36",
+        "frequency": "monthly",
+        "shortCode": "36m"
+      }
+    ],
+    "productVariants": [
+      {
+        "variantId": "sdwanbasic",
+        "productId": "sdwan1000",
+        "name": "SD-WAN BASIC",
+        "descriptionHtml": "Software-defined wide area networking (SD-WAN) is the next evolution of private networking",
+        "displayImage": "",
+        "sku": "SDWANBASIC",
+        "displayPosition": 1,
+        "servicePlan": "basic",
+        "serviceVendor": "versa",
+        "serviceTransport": "customer",
+        "securityPkg": "1",
+        "standardCpe": "1",
+        "haServicePlan": "",
+        "haServiceVendor": "",
+        "haServiceTransport": "",
+        "haSecurityPkg": "",
+        "haCpe": "0",
+        "tier1Support": "1"
+      },
+      {
+        "variantId": "sdwanbasicha",
+        "productId": "sdwan1000",
+        "descriptionHtml": "Software-defined wide area networking (SD-WAN) is the next evolution of private networking",
+        "displayImage": "",
+        "name": "SD-WAN BASIC HA",
+        "sku": "SDWANBASICHA",
+        "displayPosition": 1,
+        "servicePlan": "basic",
+        "serviceVendor": "versa",
+        "serviceTransport": "customer",
+        "securityPkg": "1",
+        "standardCpe": "1",
+        "haServicePlan": "basic",
+        "haServiceVendor": "versa",
+        "haServiceTransport": "ctl",
+        "haSecurityPkg": "0",
+        "haCpe": "1",
+        "tier1Support": "1"
+      },
+      {
+        "variantId": "sdwanpremium",
+        "productId": "sdwan1000",
+        "name": "SD-WAN PREMIUM",
+        "descriptionHtml": "Software-defined wide area networking (SD-WAN) is the next evolution of private networking",
+        "displayImage": "",
+        "sku": "SDWANPREMIUM",
+        "displayPosition": 3,
+        "servicePlan": "premium",
+        "serviceVendor": "versa",
+        "serviceTransport": "customer",
+        "securityPkg": "1",
+        "standardCpe": "1",
+        "haServicePlan": "",
+        "haServiceVendor": "",
+        "haServiceTransport": "",
+        "haSecurityPkg": "1",
+        "haCpe": "0",
+        "tier1Support": "1"
+      },
+      {
+        "variantId": "sdwanpremiumha",
+        "productId": "sdwan1000",
+        "name": "SD-WAN PREMIUM HA",
+        "descriptionHtml": "Software-defined wide area networking (SD-WAN) is the next evolution of private networking",
+        "displayImage": "",
+        "sku": "SDWANPREMIUMHA",
+        "displayPosition": 1,
+        "servicePlan": "premium",
+        "serviceVendor": "versa",
+        "serviceTransport": "customer",
+        "securityPkg": "1",
+        "standardCpe": "1",
+        "haServicePlan": "premium",
+        "haServiceVendor": "versa",
+        "haServiceTransport": "ctl",
+        "haSecurityPkg": "1",
+        "haCpe": "1",
+        "tier1Support": "1"
+      }
+    ]
+  },
+  "pricesMS": [
+    {
+      "variantId": "sdwanbasic",
+      "productId": "sdwan1000",
+      "name": "SD-WAN BASIC",
+      "descriptionHtml": "Software-defined wide area networking (SD-WAN) is the next evolution of private networking",
+      "displayImage": "",
+      "sku": "SDWANBASIC",
+      "displayPosition": 1,
+      "servicePlan": "basic",
+      "serviceVendor": "versa",
+      "serviceTransport": "customer",
+      "securityPkg": "1",
+      "standardCpe": "1",
+      "haServicePlan": "",
+      "haServiceVendor": "",
+      "haServiceTransport": "",
+      "haSecurityPkg": "",
+      "haCpe": "0",
+      "tier1Support": "1",
+      "currency": "USD",
+      "priceList": [
+        {
+          "term": "12",
+          "own": 150,
+          "ctl": 100
+        },
+        {
+          "term": "24",
+          "own": 250,
+          "ctl": 200
+        },
+        {
+          "term": "36",
+          "own": 350,
+          "ctl": 300
+        }
+      ]
+    },
+    {
+      "variantId": "sdwanbasicha",
+      "productId": "sdwan1000",
+      "descriptionHtml": "Software-defined wide area networking (SD-WAN) is the next evolution of private networking",
+      "displayImage": "",
+      "name": "SD-WAN BASIC HA",
+      "sku": "SDWANBASICHA",
+      "displayPosition": 1,
+      "servicePlan": "basic",
+      "serviceVendor": "versa",
+      "serviceTransport": "customer",
+      "securityPkg": "1",
+      "standardCpe": "1",
+      "haServicePlan": "basic",
+      "haServiceVendor": "versa",
+      "haServiceTransport": "ctl",
+      "haSecurityPkg": "1",
+      "haCpe": "1",
+      "tier1Support": "1",
+      "currency": "USD",
+      "priceList": [
+        {
+          "term": "12",
+          "own": 250,
+          "ctl": 200
+        },
+        {
+          "term": "24",
+          "own": 350,
+          "ctl": 300
+        },
+        {
+          "term": "36",
+          "own": 450,
+          "ctl": 400
+        }
+      ]
+    },
+    {
+      "variantId": "sdwanpremium",
+      "productId": "sdwan1000",
+      "name": "SD-WAN PREMIUM",
+      "descriptionHtml": "Software-defined wide area networking (SD-WAN) is the next evolution of private networking",
+      "displayImage": "",
+      "sku": "SDWANPREMIUM",
+      "displayPosition": 3,
+      "servicePlan": "premium",
+      "serviceVendor": "versa",
+      "serviceTransport": "customer",
+      "securityPkg": "1",
+      "standardCpe": "1",
+      "haServicePlan": "",
+      "haServiceVendor": "",
+      "haServiceTransport": "",
+      "haSecurityPkg": "0",
+      "haCpe": "0",
+      "tier1Support": "1",
+      "currency": "USD",
+      "priceList": [
+        {
+          "term": "12",
+          "own": 350,
+          "ctl": 300
+        },
+        {
+          "term": "24",
+          "own": 450,
+          "ctl": 400
+        },
+        {
+          "term": "36",
+          "own": 550,
+          "ctl": 500
+        }
+      ]
+    },
+    {
+      "variantId": "sdwanpremiumha",
+      "productId": "sdwan1000",
+      "name": "SD-WAN PREMIUM HA",
+      "descriptionHtml": "Software-defined wide area networking (SD-WAN) is the next evolution of private networking",
+      "displayImage": "",
+      "sku": "SDWANPREMIUMHA",
+      "displayPosition": 1,
+      "servicePlan": "premium",
+      "serviceVendor": "versa",
+      "serviceTransport": "customer",
+      "securityPkg": "1",
+      "standardCpe": "1",
+      "haServicePlan": "premium",
+      "haServiceVendor": "versa",
+      "haServiceTransport": "ctl",
+      "haSecurityPkg": "1",
+      "haCpe": "1",
+      "tier1Support": "1",
+      "currency": "USD",
+      "priceList": [
+        {
+          "term": "12",
+          "own": 450,
+          "ctl": 400
+        },
+        {
+          "term": "24",
+          "own": 550,
+          "ctl": 500
+        },
+        {
+          "term": "36",
+          "own": 650,
+          "ctl": 600
+        }
+      ]
+    }
+  ],
+  "prices": {
+    "id": 1,
+    "product_id": 223322117656312,
+    "urnId": "sd-wan",
+    "name": "SD WAN",
+    "discriptionHtml": "<p>Software-defined wide area networking (SD-WAN) is the next evolution of private networking.</p>",
+    "productType": "Network",
+    "currency": "USD",
+    "productVariants": [
+      {
+        "variantId": "sdwanbasic",
+        "productId": "sdwan1000",
+        "name": "SD-WAN BASIC",
+        "sku": "SDWANBASIC",
+        "priceInfo": {
+          "term_12": {
+            "own": 200,
+            "ctl": 250
+          },
+          "term_24": {
+            "own": 250,
+            "ctl": 350
+          },
+          "term_36": {
+            "own": 275,
+            "ctl": 375
+          }
+        }
+      },
+      {
+        "variantId": "sdwanbasicha",
+        "productId": "sdwan1000",
+        "name": "SD-WAN BASIC HA",
+        "sku": "SDWANBASICHA",
+        "priceInfo": {
+          "term_12": {
+            "own": 250,
+            "ctl": 300
+          },
+          "term_24": {
+            "own": 275,
+            "ctl": 350
+          },
+          "term_36": {
+            "own": 300,
+            "ctl": 375
+          }
+        }
+      },
+      {
+        "variantId": "sdwanpremium",
+        "productId": "sdwan1000",
+        "name": "SD-WAN PREMIUM",
+        "sku": "SDWANPREMIUM",
+        "priceInfo": {
+          "term_12": {
+            "own": 300,
+            "ctl": 350
+          },
+          "term_24": {
+            "own": 350,
+            "ctl": 375
+          },
+          "term_36": {
+            "own": 375,
+            "ctl": 400
+          }
+        }
+      },
+      {
+        "variantId": "sdwanpremiumha",
+        "productId": "sdwan1000",
+        "name": "SD-WAN PREMIUM HA",
+        "sku": "SDWANPREMIUMHA",
+        "priceInfo": {
+          "term_12": {
+            "own": 400,
+            "ctl": 450
+          },
+          "term_24": {
+            "own": 425,
+            "ctl": 475
+          },
+          "term_36": {
+            "own": 450,
+            "ctl": 500
+          }
+        }
+      }
+    ]
+  },
+  "tnc": [
+    {
+      "_id": 1,
+      "version": "1.112114",
+      "descriptionHTML": "<div class=\"modalcontent\"> <div class=\"modal-body\"><p>This CenturyLink Total Advantage Agreement (\"Agreement\") is between CenturyLink Communications, LLC f/k/a Qwest Communications Company, LLC (\"CenturyLink\") and(\"Customer\") and is effective on the date the last party signs it (\"Effective Date\").CenturyLink may withdraw this offer if Customer does not execute and deliver the Agreement to CenturyLink on or before(\"Cutoff Date\").Using CenturyLink's electronic signature process for the Agreement is acceptable.<br><div class=\"row\"><div class=\"col-sm-6\"><h4>CUSTOMER: Enter Customer's legal business name</h4><span style=\"border-bottom:1px solid black; width:275px;\">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>Authorized Signature<br><span style=\"border-bottom:1px solid black; width:275px;\">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>Name Typed or Printed<br><span style=\"border-bottom:1px solid black; width:275px;\">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>Title<br><span style=\"border-bottom:1px solid black; width:275px;\">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>Date<br></div><div class=\"col-sm-6\"><h4>CENTURYLINK COMMUNICATIONS, LLC</h4><span style=\"border-bottom:1px solid black; width:275px;\">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>Authorized Signature<br><span style=\"border-bottom:1px solid black; width:275px;\">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>Name Typed or Printed<br><span style=\"border-bottom:1px solid black; width:275px;\">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>Title<br><span style=\"border-bottom:1px solid black; width:275px;\">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>Date<br><br> </div></div>Customer's address for notices:Customer's facsimile number (if applicable):Person designated for notices:<br><br><h4>1.Services.</h4>Customer may purchase the products and services (\"Services\") in service exhibits (\"Service Exhibits\") attached to the Agreement. The Service Exhibits attached to the Agreement as of the Effective Date and incorporated by this reference are shown below. For an interim period of time until all work is completed to update the Service Exhibits, Tariffs and other terms and conditions incorporated by attachment or reference into this Agreement, all references to Qwest Communications Company, LLC mean CenturyLink Communications, LLC.1.Services.Customer may purchase the products and services (\"Services\") in service exhibits (\"Service Exhibits\") attached to the Agreement. The Service Exhibits attached to the Agreement as of the Effective Date and incorporated by this reference are shown below. For an interim period of time until all work is completed to update the Service Exhibits, Tariffs and other terms and conditions incorporated by attachment or reference into this Agreement, all references to Qwest Communications Company, LLC mean CenturyLink Communications, LLC.<br><div class=\"row\"><div class=\"col-sm-4\"><label> <input type=\"checkbox\" value=\"\" /> Analog VoIP</label><br><label> <input type=\"checkbox\" value=\"\" /> ATM - Domestic</label> <label> <input type=\"checkbox\" value=\"\" /> CenturyLink IQ Networking - Domestic</label> <label> <input type=\"checkbox\" value=\"\" /> CenturyLink IQ Networking - Domestic<br> &nbsp &nbsp and International</label> <label> &nbsp &nbsp<input type=\"checkbox\" value=\"\" /> Remote Hands</label> <label> &nbsp &nbsp<input type=\"checkbox\" value=\"\" /> International Monitored Service</label><label> <input type=\"checkbox\" value=\"\" /> Conferencing</label><label> &nbsp &nbsp<input type=\"checkbox\" value=\"\" /> Adobe Connect Service Attachment</label><label> &nbsp &nbsp<input type=\"checkbox\" value=\"\" /> ON24 Service Attachment</label><label> <input type=\"checkbox\" value=\"\" /> DDoS Mitigation</label><br><label> <input type=\"checkbox\" value=\"\" /> Disaster Recovery</label><label> <input type=\"checkbox\" value=\"\" /> Domestic Network Diversity</label><label> &nbsp &nbsp<input type=\"checkbox\" value=\"\" /> Backhaul Pricing Attachment</label><label> <input type=\"checkbox\" value=\"\" /> Email Defense</label><br><label> <input type=\"checkbox\" value=\"\" /> Ethernet Private Line</label><label> <input type=\"checkbox\" value=\"\" /> Frame Relay - Domestic</label></div><div class=\"col-sm-4\"><label> <input type=\"checkbox\" value=\"\" /> Hosted IVR for Virtual Ports</label><label> <input type=\"checkbox\" value=\"\" /> Hosted IVR for Minutes of Use</label><label> &nbsp &nbsp<input type=\"checkbox\" value=\"\" /> Hosted IVR Carrier Neutral Option</label><label> <input type=\"checkbox\" value=\"\" /> Hosted VoIP</label><br><label> <input type=\"checkbox\" value=\"\" /> Intelligent Pre-Route</label><br><label> <input type=\"checkbox\" value=\"\" /> Interaction Routing</label><br><label> <input type=\"checkbox\" value=\"\" /> IT Services</label><br><label> <input type=\"checkbox\" value=\"\" /> Local Access</label><br><label> <input type=\"checkbox\" value=\"\" /> Managed Applications</label><label> <input type=\"checkbox\" value=\"\" /> Managed IP Communications</label><label> <input type=\"checkbox\" value=\"\" /> Managed Office</label><label> <input type=\"checkbox\" value=\"\" /> Managed Office Essentials</label><label> <input type=\"checkbox\" value=\"\" /> Metro Ethernet</label><br><label> <input type=\"checkbox\" value=\"\" /> Metro Private Line</label><label> <input type=\"checkbox\" value=\"\" /> Network-Based Security</label><label> <input type=\"checkbox\" value=\"\" /> Network Management Service</label><br><label> <input type=\"checkbox\" value=\"\" /> Notify</label></div><div class=\"col-sm-4\"><label> <input type=\"checkbox\" value=\"\" /> On Demand IVR</label><br><label> <input type=\"checkbox\" value=\"\" /> Perimeter Check</label><br><label> <input type=\"checkbox\" value=\"\" /> Private Line - Domestic</label><label> <input type=\"checkbox\" value=\"\" /> Private Line -International</label><br><label> <input type=\"checkbox\" value=\"\" /> Rental CPE</label><br><label> <input type=\"checkbox\" value=\"\" /> Savvis</label><br><label> <input type=\"checkbox\" value=\"\" /> SelectAdvantage® (for CPE and <br> &nbsp &nbsp Professional Services)</label><label> <input type=\"checkbox\" value=\"\" /> SIP Trunk</label><br><label> <input type=\"checkbox\" value=\"\" /> Storage</label><label> <input type=\"checkbox\" value=\"\" /> Telecommunications Service Priority</label><label> <input type=\"checkbox\" value=\"\" /> Voice - Domestic</label><label> &nbsp &nbsp <input type=\"checkbox\" value=\"\" /> Toll Free International Termination <br>&nbsp &nbsp Service Attachment</label><label> <input type=\"checkbox\" value=\"\" /> Voice - International</label></div></div><h4>2.Term; Commitment.</h4> The \"Revenue Commitment\" and \"Initial Term\" of the Agreement are as follows: click to select $100 - $10,000click to select $15,000 - $75,000.The Initial Term begins on the Effective Date.At the end of the Initial Term, the Agreement will automatically renew for consecutive renewal periods equal to the Initial Term (a \"Renewal Term\") if not terminated earlier in accordance with the Agreement.The Initial Term and each Renewal Term are referred to as the \"Term.\"<br><br><h4>3.Contributory Charges.</h4>Customer is not obligated to order any particular Service; however, starting three months after the Effective Date, Customer's aggregate Contributory Charges must equal or exceed the Revenue Commitment during each Measurement Period.Customer authorizes CenturyLink, its Affiliates, or its agents to use billing information to measure Customer's Revenue Commitment.If Customer fails to meet its Revenue Commitment, Customer must pay CenturyLink a Shortfall charge.<br><br><h4>4.Rates.</h4>Unless specified otherwise in a Service Exhibit, Services will receive the applicable rates specified in a Service Exhibit, valid Order Form, or CenturyLink-approved quote form, for the duration of the Initial Term.CenturyLink reserves the right to modify rates after the conclusion of each Service's minimum service period upon not less than 30 days' prior written notice to Customer; provided that CenturyLink may reduce the foregoing notice period or modify rates or discounts prior to the conclusion of the minimum service period, as necessary, if such modification is based upon Regulatory Activity.CenturyLink also reserves the right to modify rates when the Agreement renews to the rates that are in effect at that time.<br><br><h4>5.Payment.</h4>CenturyLink may begin invoicing for specific Services as specified in the applicable Service Exhibit. Customer must pay CenturyLink all charges within 30 days after the invoice date.Any amount not paid when due is subject to late interest at the lesser of 1.5% per month or the maximum rate allowed by law. In addition to payment of charges for Services, Customer must also pay CenturyLink any applicable Taxes assessed in connection with Services. Taxes may vary and are subject to change.Customer may access its invoices and choose paperless invoices online through CenturyLink Control Center located at controlcenter.centurylink.com.If Customer does not choose paperless invoices through Control Center, CenturyLink may in its discretion assess a $15 MRC for each full paper invoice provided to Customer or a $2 MRC for each summary/remit only (where available) paper invoice provided to Customer.Those charges will not apply to an invoice that is not available through Control Center.Customer's payments to CenturyLink must be in the form of electronic funds transfer (via wire transfer or ACH), cash payments (via previously-approved CenturyLink processes only), or paper check.CenturyLink reserves the right to charge administrative fees when Customer's payment preferences deviate from CenturyLink's standard practices.<br><br><h4>6.Confidentiality.</h4>Neither party will, without the prior written consent of the other party: (a) disclose any of the terms of the Agreement; or (b) disclose or use (except as expressly permitted by, or required to achieve the purposes of, the Agreement) the Confidential Information of the other party. Each party will use reasonable efforts to protect the other's Confidential Information, and will use at least the same efforts to protect such Confidential Information as the party would use to protect its own. CenturyLink's consent may only be given by its Legal Department.A party may disclose Confidential Information if required to do so by a governmental agency, by operation of law, or if necessary in any proceeding to establish rights or obligations under the Agreement. CenturyLink will not be deemed to have accessed, received, or be in the possession of Customer Confidential Information solely by virtue of the fact that Customer transmits, receives, accesses or stores such information through its use of CenturyLink's Services.<br><br><h4>7.CPNI.</h4>CenturyLink is required by law to treat CPNI confidentially. Customer agrees that CenturyLink may share CPNI within its business operations (e.g., wireless, local, long distance, and broadband services divisions), and with businesses acting on CenturyLink's behalf, to determine if Customer could benefit from the wide variety of CenturyLink products and services, and in its marketing and sales activities.Customer may withdraw its authorization at any time by informing CenturyLink in writing.Customer's decision regarding CenturyLink's use of CPNI will not affect the quality of service CenturyLink provides Customer.<br><br><h4>8.Use of Name and Marks.</h4> Neither party will use the name or marks of the other party or any of its Affiliates for any purpose without the other party's prior written consent.CenturyLink's consent may only be given by its Legal Department.<br><br><h4>9.Disclaimer of Warranties.</h4>EXCEPT AS EXPRESSLY PROVIDED IN THE AGREEMENT, ALL SERVICES AND PRODUCTS ARE PROVIDED \"AS IS.\" CENTURYLINK DISCLAIMS ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO ALL WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. CENTURYLINK MAKES NO WARRANTIES OR REPRESENTATIONS THAT ANY SERVICE WILL BE FREE FROM LOSS OR LIABILITY ARISING OUT OF HACKING OR SIMILAR MALICIOUS ACTIVITY, OR ANY ACT OR OMISSION OF THE CUSTOMER.<br><br><h4>10.Limitations of Liability.</h4>The remedies and limitations of liability for any claims arising between the parties are set forth below.<br><br><h4>10.1Consequential Damages.</h4> NEITHER PARTY OR ITS AFFILIATES, AGENTS, OR CONTRACTORS IS LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, INDIRECT, SPECIAL, OR PUNITIVE DAMAGES OR FOR ANY LOST PROFITS, LOST REVENUES, LOST DATA, LOST BUSINESS OPPORTUNITY, OR COSTS OF COVER.THESE LIMITATIONS APPLY REGARDLESS OF THE LEGAL THEORY UNDER WHICH SUCH LIABILITY IS ASSERTED AND REGARDLESS OF FORESEEABILITY.<br><br><h4>10.2Claims Related to Services.</h4> For Customer's claims related to Service deficiencies or interruptions, Customer's exclusive remedies are limited to: (a) those remedies set forth in the SLA for the affected Service or (b) the total MRCs or usage charges paid by Customer for the affected Service in the one month immediately preceding the event giving rise to the claim if an SLA does not exist for the affected Service.<br><br><h4>10.3Personal Injury; Death; Property Damages.</h4>For claims arising out of personal injury or death to a party's employee, or damage to a party's real or personal property, that are caused by the other party's negligence or willful misconduct in the performance of the Agreement, each party's liability islimited to proven direct damages.<br><br><h4>10.4Other Direct Damages.</h4>For all other claims arising out of the Agreement, each party's maximum liability will not exceed in the aggregate the total MRCs and usage charges paid by Customer to CenturyLink under the Agreement in the three months immediately preceding the event giving rise to the claim (\"Damage Cap\").The Damage Cap will not apply to a party's indemnification obligations or Customer's payment obligations under the Agreement.<br><br> <h4>11.Indemnification.</h4>Each party will defend and indemnify the other party, its Affiliates, agents, and contractors against all third party claims for damages, liabilities, or expenses, including reasonable attorneys' fees, arising directly from performance of the Agreement and related to personal injury or death, or damage to personal tangible property that is alleged to have been caused by the negligence or willful misconduct of the indemnifying party. Customer will also defend and indemnify CenturyLink, its Affiliates, agents, and contractors against all third party claims for damages, liabilities, or expenses, including reasonable attorneys' fees, related to the modification or resale of the Services by Customer or End Users, or any AUP violation.<br> <br> <h4>12.Termination.</h4><br><h4>12.1Service.</h4>Either party may terminate an individual Service or a Service Exhibit: (a) in accordance with the individual Service Exhibit's term requirements with 60 days' prior written notice to the other party or (b) for Cause. If Service or a Service Exhibit is terminated by Customer for Convenience or by CenturyLink for Cause, then Customer will pay Cancellation Charges. <br><br><h4>12.2Agreement.</h4>Either party may terminate the Agreement and all Services by: (a) providing written notice to the other party of its intention not to renew the Agreement at least 60 days prior to the expiration of the then current Term or (b) for Cause.Cause to terminate an individual Service Exhibit will not constitute Cause to terminate the Agreement; rather, Cause to terminate the entire Agreement for Service-related claims will exist only if Customer has Cause to terminate all or substantially all of the Services under the applicable SLA, Service Exhibit, RSS or Tariff.If the Agreement is terminated by Customer for Convenience or by CenturyLink for Cause prior to the conclusion of the Term, then Customer will pay the higher of: (c) the Early Termination Charge or (d) the total Cancellation Charges that apply for terminating all CenturyLink Services at the time the Agreement is terminated.<br><br><h4>12.3Unpaid Charges.</h4>Customer will remain liable for charges accrued but unpaid as of the termination date.<br><br><h4>13.Miscellaneous.</h4><br> <h4>13.1General.</h4>The Agreement's benefits do not extend to any third party (e.g., an End User).If any term of the Agreement is held unenforceable, the remaining terms will remain in effect.Except for time requirements as specifically stated in a Service Exhibit or SLA, neither party's failure to exercise any right or to insist upon strict performance of any provision of the Agreement is a waiver of any right under the Agreement.The terms and conditions of the Agreement regarding confidentiality, indemnification, limitation of liability, warranties, payment, dispute resolution, and all other terms of the Agreement that should by their nature survive the termination of the Agreement will survive.Each party is not responsible for any delay or other failure to perform due to a Force Majeure Event.<br><br><h4>13.2Conflicts Provision.</h4>If a conflict exists among provisions within the Agreement, the following order of precedence will apply in descending order of control: Service Exhibit, the Agreement, and any Order Form.If Services are provided pursuant to a Tariff, RSS, or ISS as described in the applicable Service Exhibits, the order of precedence will apply in the following descending order of control:Tariff, Service Exhibit, the Agreement, RSS, ISS, and Order Form.<br> <br> <h4>13.3Independent Contractor.</h4> CenturyLink provides the Services as an independent contractor. The Agreement will not create an employer-employee relationship, association, joint venture, partnership, or other form of legal entity or business enterprise between the parties, their agents, employees or affiliates.<br><br><h4>13.4ARRA.</h4>Customer will not pay for the Services with funds obtained through the American Recovery and Reinvestment Act or other similar stimulus grants or loans that would obligate CenturyLink to provide certain information or perform certain functions unless each of those obligations are explicitly identified and agreed to by the parties in the Agreement or in an amendment to the Agreement.<br> <br><h4>13.5HIPAA.</h4> CenturyLink does not require or intend to access Customer data in its performance hereunder, including but not limited to any confidential health related information of Customer's clients, which may include group health plans, that constitutes Protected Health Information (\"PHI\"), as defined in 45 C.F. R. §160.103 under the Health Insurance Portability and Accountability Act of 1996 (\"HIPAA Rules\").To the extent that any exposure to PHI is incidental to CenturyLink's provision of Service and not meant for the purpose of accessing, managing the PHI or creating or manipulating the PHI, such exposure is allowable under 45 CFR 164.502(a)(1)(iii). <br><br><h4>13.6Credit Approval.</h4> Provision of Services is subject to CenturyLink's credit approval of Customer. As part of the credit approval process, CenturyLink may require Customer to provide a deposit or other security. Additionally during the Term, if Customer's financial circumstance or payment history becomes reasonably unacceptable to CenturyLink, CenturyLink may require adequate assurance of future payment as a condition of continuing CenturyLink's provision of Services. Customer's failure to provide adequate assurances required by CenturyLink is a material breach of the Agreement. CenturyLink may provide Customer's payment history or other billing/charge information to credit reporting agencies or industry clearinghouses.<br><br><h4>13.7Installation, Maintenance and Repair </h4><br><h4>(a)</h4>Provision of Services is subject to availability of adequate capacity and CenturyLink's acceptance of a complete Order Form.<br><br><h4>(b)</h4>Customer will reasonably cooperate with CenturyLink or its agents to install, maintain, and repair Services.Customer will provide or secure at Customer's expense appropriate space and power; and rights or licenses if CenturyLink must access the building of Customer's premises to install, operate, or maintain Service or associated CenturyLink equipment. CenturyLink may refuse to install, maintain, or repair Services if any condition on Customer's premises is unsafe or likely to cause injury.<br><br><h4>(c)</h4>Customer is responsible for any facility or equipment repairs on Customer's side of the demarcation point.Customer may request a technician dispatch for Service problems.Before dispatching a technician, CenturyLink will notify Customer of the dispatch fee.CenturyLink will assess a dispatch fee if it determines the problem is on Customer's side of the demarcation point or was not caused by CenturyLink's facilities or equipment on CenturyLink's side of the demarcation point.<br><br><h4>13.8Governing Law; Dispute Resolution.</h4><br><h4>(a)</h4>Billing Disputes.If Customer disputes a charge in good faith, Customer may withhold payment of that charge if Customer makes timely payment of all undisputed charges when due and provides CenturyLink with a written explanation of the reasons for Customer's dispute of the charge within 90 days after the invoice date of such amount.If CenturyLink determines, in its good faith, that the disputed charge is valid, CenturyLink will notify Customer and within five business days after CenturyLink's notification, Customer must pay the charge and accrued interest.<br> <br><h4>(b)</h4>Governing Law; Forum.Delaware state law, without regard to choice-of-law principles, governs all matters relating to the Agreement.Any legal proceeding relating to the Agreement will be brought in a U.S. District Court, or absent federal jurisdiction, in a state court of competent jurisdiction, in Denver, Colorado.<br><br><h4>(c)<h4>Waiver of Jury Trial and Class Action.Each party, to the extent permitted by law, knowingly, voluntarily, and intentionally waives its right to a jury trial and any right to pursue any claim or action relating to the Agreement on a class or consolidated basis or in a representative capacity.If for any reason the jury trial waiver is held to be unenforceable, the parties agree to binding arbitration for any dispute relating to the Agreement under the Federal Arbitration Act, 9 U.S.C. § 1, et. seq. The arbitration will be conducted in accordance with the JAMS Comprehensive Arbitration Rules.Judgment upon the arbitration award may be entered in any court having jurisdiction. <br> <br><h4>(d)<h4>Limitations Period. Any claim relating to the Agreement must be brought within two years after the claim arises other than Customer disputing an amount in an invoice, which must be done by Customer within 90 days after the invoice date of the disputed amount.<br> <br> <h4>13.9No Resale; Security.</h4> Customer represents that it is not a reseller of any telecommunication services provided under this Agreement as described in the Telecommunications Act of 1996, as amended, or applicable state law and acknowledges it is not entitled to any reseller discounts under any laws.CenturyLink has adopted and implemented, and will maintain, a corporate information security program designed to protect Customer information, materials and data accessed and possessed by CenturyLink from loss, misuse and unauthorized access or disclosure. Such program includes formal information security policies and procedures.The CenturyLink information security program is subject to reasonable changes by CenturyLink from time to time. CenturyLink's standard service offerings do not include managed security services such as encryption, intrusion detection, monitoring or managed firewall. Customer is responsible for selecting and using the level of security protection needed for all Customer data stored or transmitted via the Service and using reasonable information security practices, including those relating to the encryption of data. <br><br><h4>13.10Assignment.</h4>Either party may assign the Agreement without the other party's prior written consent: (a) in connection with the sale of all or substantially all of its assets; (b) to the surviving entity in any merger or consolidation; or (c) to an Affiliate provided such party gives the other party 30 days' prior written notice.Any assignee of the Customer must have a financial standing and creditworthiness equal to or better than Customer's, as reasonably determined by CenturyLink, through a generally accepted, third party credit rating index (i.e. D&B, S&P, etc.).Any other assignment will require the prior written consent of the other party. <br><br><h4>13.11Amendments; Changes.<h4> The Agreement may be amended only in a writing signed by both parties' authorized representatives.Each party may, at any time, reject any handwritten change or other alteration to the Agreement.CenturyLink may change features or functions of its Services; for material changes that are adverse to Customer, CenturyLink will provide 30 days' prior written notice, but may provide a shorter notice period if the change is based on Regulatory Activity.CenturyLink may amend, change, or withdraw the Tariffs, RSS, ISS or AUP, with such updated Tariffs, RSS, ISS or AUP effective upon posting or upon fulfillment of any necessary regulatory requirements.<br><br><h4>13.12Websites.<h4> References to websites in the Agreement include any successor websites designated by CenturyLink.<br><br><h4>13.13Required Notices.</h4>Unless provided otherwise in the Agreement, all required notices to CenturyLink must be in writing, sent to 1801 California St., #900, Denver, CO 80202; Fax: 888-778-0054; Attn.: Legal Dept., and to Customer as provided above.All notices are effective: (a) when delivered via overnight courier mail or in person to the recipient named above; (b) three business days after mailed via regular U.S. Mail; or (c) when delivered by fax if duplicate notice is also sent by regular U.S. Mail.<br> <br><h4>13.14Service Termination Notices.</h4>Customer's notice of termination for CenturyLink QCC Services must be sent via mail, facsimile or e mail to:CenturyLink, Attn.: GBM Disconnects, 112 Sixth St., Bristol, TN 37620, Fax: 866.887.6633, e-mail: GBMdisconnects@CenturyLink.com.Such termination is effective 30 days after CenturyLink's receipt of the notice, unless a longer period is otherwise required. For Services under the Select Advantage Service Exhibit, Customer must call the customer care number specified on Customer's invoice to provide notice of termination. <br><br><h4>13.15Entire Agreement.</h4> The Agreement (including any applicable Service Exhibit, CenturyLink accepted Order Forms, and all referenced documents) constitutes the entire agreement between the parties and supersedes all prior oral or written agreements or understandings relating to the same service, ports, or circuits at the same locations as covered under the Agreement.<br> <br><h4>14.Definitions.</h4>\"Affiliate\" means any entity controlled by, controlling, or under common control with a party.<br>\"Annual Period\" means each 12 month period following the Effective Date.<br>\"AUP\" means the Acceptable Use Policy incorporated by this reference and posted at qwest.centurylink.com/legal/.<br>\"Cancellation Charge\" means the cancellation charge described in the applicable Service Exhibit and charges incurred by CenturyLink from a third party provider as a result of an early termination.<br>\"Cause\" means the failure of a party to perform a material obligation under the Agreement, which failure is not remedied: (a) for payment defaults by Customer, within five days of separate written notice from CenturyLink of such default; or (b) for any other material breach, within 30 days after written notice.<br>\"CenturyLink QCC\" means the former Qwest Communications Company, LLC d/b/a CenturyLink QCC. On April 1, 2014, CenturyLink completed an internal reorganization resulting in the merger of multiple CenturyLink owned companies into Qwest Communications Company, LLC. Simultaneously with the merger, Qwest Communications Company, LLC changed its name to CenturyLink Communications, LLC. The term \"CenturyLink QCC\" refers to the former \"d/b/a CenturyLink QCC\" company and not to any other CenturyLink owned companies now a part of CenturyLink Communications, LLC.<br>\"CenturyLink QC Contributory Services\" means the following Qwest Corporation d/b/a CenturyLink QC services: Analog Private Line, Analog Trunks, ATM (IntraLATA), Business local exchange lines (e.g., CenturyLink Choice Business packages); Centrex and Centron, CenturyLink High-Speed Internet, Digital Switched Service, directory services, DS1, DS3, Frame Relay (IntraLATA), GeoMax, ISDN Services, Metro Ethernet, Optical Wavelength Service, SHARP, SHNS, SST, and Uniform Access Solution.<br>\"Confidential Information\" means any information that is not generally available to the public, whether of a technical, business, or other nature, (including CPNI), and that: (a) the receiving party knows or has reason to know is confidential, proprietary, or trade secret information of the disclosing party; or (b) is of such a nature that the receiving party should reasonably understand that the disclosing party desires to protect the information from disclosure.Confidential Information will not include information that is in the public domain through no breach of the Agreement by the receiving party or is already known or is independently developed by the receiving party. <br>\"Contributory Charges\" means: (a) all MRCs and usage charges for Services (other than Local Access Service) ordered under the Agreement after the Effective Date and incurred during the Term and (b) all MRCs and usage charges for CenturyLink QC Contributory Services ordered before or after the Effective Date under separate agreements and incurred during the Term.Contributory Charges do not include NRCs, CPE, any charges under the Local Access Service Exhibit, pass-through charges, Taxes, worldcard payphone surcharges, other surcharges, issued credits, or other charges not specified as Contributory Charges under the Agreement. <br>\"Convenience\" means any reason other than for Cause.<br>\"CPE\" means any customer equipment, software, and/or other materials of Customer used in connection with the Service. <br>\"CPNI\" means Customer Proprietary Network Information, which includes confidential account, usage, and billing-related information about the quantity, technical configuration, type, destination, location, and amount of use of a customer's telecommunications services.CPNI reflects the telecommunications products, services, and features that a customer subscribes to and the usage of such services, including call detail information appearing in a bill.CPNI does not include a customer's name, address, or telephone number.<br>\"Early Termination Charge\" equals: (a) 100% of the Revenue Commitment times the number of months remaining in the then current Annual Period in which the Agreement is terminated; plus (b) 35% of the total Revenue Commitment for any other Annual Period(s) remaining in the Term.<br>\"End User\" means Customer's members, end users, customers, or any other third parties who use or access the Services or the CenturyLink network via the Services.<br>\"Force Majeure Event\" means an unforeseeable event beyond the reasonable control of that party, including without limitation: act of God, fire, explosion, lightning, hurricane, labor dispute, cable cuts by third parties, acts of terror, material shortages or unavailability, government laws or regulations, war or civil disorder, or failures of suppliers of goods and services.<br>\"ISS\" means CenturyLink's Information Services Schedule incorporated by this reference and posted at:http://www.centurylink.com/tariffs/clc_info_services.pdf.<br>\"Measurement Period\" means each monthly billing cycle following the Effective Date.<br>\"MRC\" means monthly recurring charge.<br>\"NRC\" means nonrecurring charge.<br>\"Order Form\" includes both order request forms and quotes issued by CenturyLink.If a CenturyLink service requires a quote to validate the Order Form pricing, the quote will take precedence over the order request form, but not over the Service Exhibit.<br>\"Regulatory Activity\" is a regulation or ruling by any regulatory agency, legislative body or court of competent jurisdiction.<br>\"RSS\" means as applicable: CenturyLink's Rates and Services Schedules incorporated by this reference and posted at http://www.centurylink.com/tariffs/fcc_clc_ixc_rss_no_2.pdffor CenturyLink's International RSS and at http://www.centurylink.com/tariffs/fcc_clc_ixc_rss_no_3.pdffor CenturyLink's Interstate RSS. <br>\"Shortfall\" means the difference between the Revenue Commitment and Customer's Contributory Charges paid during a Measurement Period.<br>\"SLA\" means the service level agreement applicable to a Service as described in a Service Exhibit.<br>\"Tariff\" includes as applicable: CenturyLink state tariffs, price lists, price schedules, administrative guidelines, catalogs, and rate and term schedules incorporated by this reference and posted at http://www.centurylink.com/tariffs.<br>\"Taxes\" means foreign, federal, state, and local excise, gross receipts, sales, use, privilege, or other tax (other than net income) now or in the future imposed by any governmental entity (whether such Taxes are assessed by a governmental authority directly upon CenturyLink or the Customer) attributable or measured by the sale price or transaction amount, or surcharges, fees, and other similar charges that are required or permitted to be assessed on the Customer. These charges may include state and federal Carrier Universal Service Charges, as well as charges related to E911, and Telephone Relay Service.</p></div></div>",
+      "pdfURL": "../assets/docs/tnc/general/1.112114/CTA.pdf",
+      "type": "General"
+    },
+    {
+      "_id": 2,
+      "version": "1.111416",
+      "descriptionHTML": "<div class=\"modalcontent\"><div class=\"modal-body\"><p><h4>1.General.</h4>Customer must execute this Service Exhibit and the CenturyLink Rental CPE Service Exhibit (“Service Exhibits“), and the CenturyLink® Total Advantage™ or CenturyLink® Loyal Advantage® Agreement (“Agreement”). CenturyLink QCC will provide CenturyLink Software-Defined Wide Area Networking Service (“SD-WAN” or “Service”) under the terms of the Agreement and Service Exhibits. Capitalized terms not defined in the Agreement or Service Exhibits and any technical terms used herein will be defined as commonly understood in the industry. The SD-WAN service includes Rental CPE. The Rental CPE included with this Service is subject to the Rental CPE Service Exhibit.<br><h4>2.Definitions.</h4>“Pricing Attachment” means a document, incorporated into this Exhibit by reference, which contains rates specific to Service.<br> “Start of Service Date” means the date five days after the date CenturyLink notifies Customer that Service is provisioned and ready for use.<h4>3.Service Description.</h4><h4>3.1Software-Defined WAN Service.</h4>SD-WAN is a management overlay that uses software, deployed on a CenturyLink-provided CPE appliance at Customer’s location (“SD-WAN Device”), to build a homogeneous private network through different types of network connections. The SD-WAN Device establishes logical connections with other Customer edge CPE appliances across a physical WAN. CenturyLink supports SD-WAN managed service via CenturyLink internally-deployed sets of diverse network controllers (collectively “Controller”) and a password-protected management portal (“Management Portal”). The Controller provides an entry point for the customer locations by authenticating the site and assisting to establish a secure channel between customer locations. The Management Portal provides centralized configuration and management via a single pane for all customer locations. Customer understands and agrees that SD-WAN Service is not eligible for any CenturyLink service level agreements.<br> <h4>3.2SD-WAN Service options.</h4>The SD-WAN features are described below. The features are available in one of two package types that each contain a fixed set of features.Pricing and charges are based upon the package selected by Customer, as more fully set forth in an attachedPricing Attachment , or on a valid signed CenturyLink-issued quote. <h4>SD-WAN Basic Package.</h4>The SD-WAN Basic Package supports private networking over the top of site to site networking.The SD-WAN service will include an eligible Rental CPE appliance. The CPE is a small tabletop device that consists of 4 core CPU, 8 GB memory and 64 GB SSD. CenturyLink will configure the CPE appliance and ship the appliance to the Customer-specified location. Customer installation shall be done in accordance with the Plug and Play terms and conditions, as linked in the Rental CPE Service Exhibit. In some cases, CenturyLink may use repackaged Rental CPE, or substitute Rental CPE with another CPE device at CenturyLink’s discretion. The terms and conditions of the CenturyLink Rental CPE Service Exhibit apply to this Service.CenturyLink will provide Pro-MET® On-Site Standard (8X5, on-site, next business day) maintenance of the SD-WAN Device at no extra charge. <br> <h4>SD-WAN Premium Package.</h4>The SD-WAN Premium Package supports private networking, plus internet connectivity with stateful firewall.The Premium Package includes all features of the SD-WAN Basic Package.<br> <h4>Optional Advanced Security Services:</h4> CenturyLink provides a set of next generation firewall, web-filtering, intrusion prevention and localized DDOS features. This Service is only available with the SD-WAN Premium Package.Customer will pay an additional MRC, as outlined in an attached Pricing Attachment, or in a valid CenturyLink-issued quote.<br> <h4>Optional CPE Upgrade:</h4>For an additional MRC, set forth in an attached Pricing Attachment or on a valid signed CenturyLink-issued quote, Customer may upgrade the Rental CPE appliance to a medium rack-mount device that has 8 core CPU, 16 GB memory and 64 GB SSD.<br> <h4>High Availability:</h4>Customer may order two SD-WAN packages at the same site to create a high-availability resilient network design.<br> <h4>3.3Ongoing Management, Monitoring, and Reporting.</h4> CenturyLink and the Customer will be able to perform ongoing management, monitoring, and reporting.Requests must be submitted via the Management Portal or by calling the CenturyLink SD-WAN network operations center (877-347-5991).Customer can submit up to 10 configuration changes per month per site.CenturyLink reserves the right to charge a commercially reasonable additional rate for each configuration request over that amount.CenturyLink will exclusively maintain global administrative access to SD-WAN at all times.CenturyLink will maintain the root password for all functions.All remote CenturyLink administrative functions occur via an encrypted session.Customers will also have the option to co-manage their SD-WAN Service configuration via the Management Portal.CenturyLink will not be responsible for outages or security incidents that occur due to Customer changes or configuration.<br> <h4>3.4Customer Responsibilities.</h4> Customer is responsible for complying with all laws and regulations in connection with its use of the Service, including, but not limited to: (a) all privacy laws and regulations with respect to personally identifiable information sent or received by Customer or its End Users; and (b) when traffic from an international location will be sent to the SD-WAN platform, advising End Users that their content or personal information is being transferred outside an international location and receiving any required consents. Customer must notify CenturyLink of any move or relocation of SD-WAN Service3.5Data Compilation.Customer consents to CenturyLink's use of inspection methods to collect, gather and compile event log data to look at trends and real or potential threats and provide and improve Service. CenturyLink may compile or otherwise combine this event log data with similar data of other customers, so long as such data is compiled or combined in a manner that will not in any way reveal the data as being attributable to Customer.Customer specific data will not be shared without Customer’s consent unless otherwise required by law.CenturyLink may retain event log data for as long as necessary or useful for its uses consistent with this Service Exhibit.CenturyLink has no obligation to provide log data to Customer.<br> <h4>3.6Excluded Services.</h4>CenturyLink is not responsible for any services, systems, software or equipment Customer uses with SD-WAN.CenturyLink will not debug problems on, or configure, any internal or external hosts or networks (examples include, but are not limited to the following: routers, DNS servers, mail servers, WWW servers, and FTP servers). <br> <h4>4.Charges.</h4>Customer must pay all applicable MRCs and NRCs set forth in an attached Pricing Attachment, or on a valid CenturyLink-issued quote. The SD-WAN MRC includes the Rental CPE MRC.If the Service Term is 24 or 36 months, CenturyLink will waive SD-WAN NRCs if Service remains installed until the expiration of the Service Term.Charges will commence on the Start of Service Date.The rates set forth in the Pricing Attachment or on the quote will be used to calculate Contributory Charges. <br> <br> <h4 class=\"text-center\">**Section 4.1 for POM only for use with Trial Period customers**</h4> <br> <h4>4.1Trial Period.</h4>Customer will participate in a voluntary program intended to improve the customer experience associated with SD-WAN.  As part of the program, Customer will provide feedback on the SD-WAN service via survey questions and phone interviews with CenturyLink product and marketing teams.  Focus areas will be: available feature sets, pricing models, installation intervals, and overall support experience.  Program feedback will be used to improve the service offering.  In exchange for Customer’s participation in the experience improvement program, CenturyLink will waive the SD-WAN MRCs for the first full billing cycle. If Customer is not satisfied with SD-WAN during the first full billing cycle for any reason, Customer may terminate SD-WAN without incurring any SD-WAN Cancellation Charges by notifying CenturyLink in writing within 30 days after the first SD-WAN is provisioned and ready for use. This Section will not apply to any CenturyLink-provided or re-sold underlying transport service.<br> <h4>5.Upgrade.</h4>During a Service Term, Customer may upgrade from the SD-WAN Basic Package to the SD-WAN Premium Package.Customer may need to amend the Agreement to include a revised Term with an Upgrade.Cancellation charges associated with existing SD-WAN Basic service and NRCs associated with SD-WAN Premium service will be waived upon Customer upgrade.<br> <h4>6.Term; Cancellation.</h4>Customer must purchase each Service for a specific term for the particular Service ordered (each, a “Service Term”).The Service Term for each new SD-WAN Service instance will begin on the Start of Service Date.The minimum Service Term for each SD-WAN is 12 months. Upon expiration of the Service Term, Service will continue on a month-to month basis unless either party elects to cancel the Service by providing 60 days prior written notice of such cancellation to the other party.If the Agreement, or any Service provisioned under this Service Exhibit, is canceled prior to the expiration of the applicable Service Term for reasons other than by Customer for Cause, then Customer will pay to CenturyLink a “Cancellation Charge” equal to (a) 100% of the applicable SD-WAN MRCs, including those for purchased Optional SD-WAN Services, multiplied by the number of months remaining in the first 12 months of the Service Term, if any, plus (b) 35% of the applicable SD-WAN MRCs, including those for purchased Optional SD-WAN Services, multiplied by the number of months remaining to complete 24 or 36 months of the remaining Service Term, if any; and (c) the amount of any NRCs/installation charges that CenturyLink discounted or waived.Customer remains responsible for all accrued and unpaid charges for the canceled Service provided through the effective date of such cancellation.The Term and Cancellation Charge defined herein will apply in lieu of any minimum service term and cancellation charges defined in the Rental CPE Service Exhibit, except that the charge in the Rental CPE section that applies if Customer fails to return Rental CPE to CenturyLink will also apply.<br> <h4>7.Customer-Provided Internet Connection.</h4>Customer may provide its own internet connection for use with SD-WAN. Customer-provider connectivity must include (a) an internet path from Customer to CenturyLink for network management and control purposes and (b) a Fast Ethernet (FastE) hand-off.If a Customer provided internet connection does not include a FastE hand-off, a termination device for that hand-off will be required that supports FastE hand-off to SD-WAN.If Customer provides their own internet connection, the rates indicated for No CenturyLink Provided Connectivity at Site, indicated in Section 1.1 of the below Pricing Attachment or on the valid CenturyLink-issued quote, will apply.<br><h4>8.Additional Disclaimer of Warranty.</h4>In addition to any other disclaimers of warranty stated in the Agreement, CenturyLink makes no warranty, guarantee, or representation, express or implied, that all security threats and vulnerabilities will be detected, that content will be blocked or allowed in accordance with Customer’s policies, or that the performance of the Services will render Customer’s systems invulnerable to security breaches.Customer is responsible for Customer’s own network security policy and security response procedures.If any equipment or software not provided by CenturyLink impairs Customer's use of any Service, Customer will nonetheless be liable for payment for all Services provided by CenturyLink. Furthermore, Customer understands and agrees that as a consequence of the operation of the service, CenturyLink makes no warranty, guarantee, or representation, express or implied, that all legitimate communications will be received by Customer. Customer will ensure that its systems and networks will have up-to-date security controls and patches and that its systems and networks that connect with those included with SD-WAN, or that use common network features, have appropriate security controls.Customer agrees to notify CenturyLink in advance of any network changes or activities that could impact Service or reasonably interfere with the monitoring of the Service, such as planned outages, configuration changes, maintenance, or systems changes.<br> <h4>9.E-mail Notification.</h4>Customer acknowledges and agrees that CenturyLink may contact Customer via e-mail at the e-mail address provided to CenturyLink when Customer ordered the Service for any reason relating to the Service, including for purposes of providing Customer any notices required under the Agreement.Customer agrees to provide CenturyLink with any change to its email address. <br> <h4>10.AUP.</h4>All use of the Services must comply with the AUP located at http://www.qwest.centurylink.com/legal/, which is subject to change.CenturyLink may reasonably modify the AUP to ensure compliance with applicable laws and regulations and to protect CenturyLink's network and customers.  Any changes to the AUP will be consistent with the purpose of the AUP to encourage responsible use of CenturyLink's networks, systems, services, Web sites, and products.<br>   <br> <h4 class=\"text-center\">PRICING ATTACHMENT</h4> <br> <h4 class=\"text-center\">****IF CUSTOMER IS SIGNINGA CONTRACT READY QUOTE OUT OF APTTUS, THIS PRICING ATTACHMENT MUST BE DELETED FROM THE SERVICE EXHIBIT.****</h4> <br> <h4>1.Charges.</h4>A single MRC and NRC apply for each Service instance.If the Service Term is 24 or 36 months, CenturyLink will waive SD-WAN NRCs if Service remains installed until the expiration of the Service Term.Customer will qualify for CenturyLink Provided Connectivity if Customer is using any connectivity provided or resold by CenturyLink.Charges for Service are as follows.<br> <h4>1.1SD-WAN Package Type.</h4> <h4>36 Month Term</h4> <div class=\"table-responsive\"> <table class=\"table\"><thead><tr><th>SD-WAN Package Type</th><th>CenturyLink Provided Connectivity Only at Site (MRC)</th><th>Includes any non-CenturyLink Provided Connectivity at Site (MRC)</th><th>NRC</th></tr></thead><tbody><tr><td>Basic</td><td>$199/mo</td><td>$229/mo</td><td>$200</td></tr><tr><td>Premium</td><td>$229/mo</td><td>$259/mo</td><td>$200</td></tr></tbody> </table> </div> <h4>24 Month Term</h4> <div class=\"table-responsive\"> <table class=\"table\"><thead><tr><th>SD-WAN Package Type</th><th>CenturyLink Provided Connectivity Only at Site (MRC)</th><th>Includes any non-CenturyLink Provided Connectivity at Site (MRC)</th><th>NRC</th></tr></thead><tbody><tr><td>Basic</td><td>$209/mo</td><td>$239/mo</td><td>$200</td></tr><tr><td>Premium</td><td>$239/mo</td><td>$269/mo</td><td>$200</td></tr></tbody> </table> </div> <h4>12 Month Term</h4> <div class=\"table-responsive\"> <table class=\"table\"><thead><tr><th>SD-WAN Package Type</th><th>CenturyLink Provided Connectivity Only at Site (MRC)</th><th>Includes any non-CenturyLink Provided Connectivity at Site (MRC)</th><th>NRC</th></tr></thead><tbody><tr><td>Basic</td><td>$219/mo</td><td>$249/mo</td><td>$200</td></tr><tr><td>Premium</td><td>$249/mo</td><td>$279/mo</td><td>$200</td></tr></tbody> </table> </div> <h4>1.2Optional SD-WAN Services.</h4>MRCs are in addition to the SD-WAN Package Type shown above.<br> <div class=\"table-responsive\"> <table class=\"table\"><thead><tr><th>Optional Services</th><th>MRC</th></tr></thead><tbody><tr><td>Security Package </td><td>$35/additional MRC</td></tr></tbody> </table> </div> <h4>1.3Rental CPE.</h4> The charges for Rental CPE are included in the SD-WAN Service MRC.<br> <div class=\"table-responsive\"> <table class=\"table\"><thead><tr><th>SD-WAN Hardware</th><th>MRC</th></tr></thead><tbody><tr><td>Small tabletop device that has 4 core CPU, 8 GB memory and 64GB SSD</td><td>Included</td></tr><tr><td>Optional Hardware Upgrade to: Medium rack-mount device that has 8 core CPU, 16 GB memory and 64 GB SSD</td><td>$35/additional MRC to SD-WAN package</td></tr></tbody> </table> </div> <h4>1.4High Availability Discount.</h4>When ordering two SD-WAN packages at the same site to create a high-availability resilient network design, CenturyLink will provide a 25% discount on the MRC for the second instance of the service.If the two SD-WAN packages at the same site are not equal in pricing, the lower price will be discounted.<br> <br> <span style=\"font-size:10px;\">Example: If at the same site you purchase an SD-WAN premium package with customer provided transport* and the optional Security Package, and a SD-WAN Basic package with CenturyLink provided transport*- both on a 36 month term, the Premium package is $294 MRC and the Basic package will be discounted to $149.25 MRC for the SD-WAN service<br> *Transport is billed separately and not reflected in the MRC in these examples.</span> <br> <h4 class=\"text-center\">ATTACHMENT 1</h4> <br> <h4 class=\"text-center\">COMPREHENSIVE MANAGEMENT</h4> <br> <h4 class=\"text-center\">LIMITED LETTER OF AGENCY<br> between       (“Customer”) and CenturyLink Communications, LLC f/k/a Qwest Communications Company, LLC (“CenturyLink”) </h4> <br> This limited letter of agency (“LOA”) hereby authorizes CenturyLink to act as the Customer's agent for the limited purpose of contacting Customer’s designated Local Exchange Carrier (“LEC”), Interexchange Carrier (“IXC”), Internet Service Provider (\"ISP\"), or customer premises equipment (“CPE”) maintenance provider in conjunction with CenturyLink SD WAN Service.SD WAN Service activities will consist of working with Customer’s LEC, IXC, ISP, and/or CPE maintenance provider for the purpose of:(a) extracting information concerning transmission data elements carried over Customer’s network connection; (b) identifying Customer’s links or data link connection identifiers (“DLCIs”); (c) opening, tracking, and closing trouble tickets with the LEC, IXC, ISP, or CPE maintenance provider on Customer’s transport links or CPE when an alarm or fault has been detected; (d) dispatching CPE repair personnel on behalf of Customer to CPE for which a fault has been detected; and (e) discussing fault information with the LEC, IXC or CPE maintenance provider on behalf of Customer to facilitate resolution of the problem.<br> <br> CenturyLink does not assume any of Customer's liabilities associated with any of the services the Customer may use.<br><br> The term of this LOA will commence on the date of execution below and will continue in full force and effect until terminated with 30 days written notice by one party to the other or until the expiration or termination of the CenturyLink SD-WAN Service.<br> <br> A copy of this LOA will, upon presentation to LEC, IXC, ISP, and/or CPE maintenance provider, as applicable, be deemed authorization for CenturyLink to proceed on Customer's behalf.<br> <br> <span style=\"border-bottom:1px solid black; width:275px;\">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</span><br> Customer Company Name<br><br> <span style=\"border-bottom:1px solid black; width:275px;\">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</span><br> Authorized Signature of Customer<br><br> <span style=\"border-bottom:1px solid black; width:275px;\">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</span><br> Print or Type Name<br><br> <span style=\"border-bottom:1px solid black; width:275px;\">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</span><br> Title<br><br> <span style=\"border-bottom:1px solid black; width:275px;\">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</span><br> Date <br><br><br></p></div> </div>",
+      "pdfURL": "../assets/docs/tnc/sdwan/1.111416/SD-WAN_Service_Agreement.pdf",
+      "type": "SDWAN"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mongoChangeLog>
+    <changeSet changeId="ChangeSet-1" author="pctl">
+        <script>
+            db.notification.drop()
+            db.notification.insert([{
+            "_id":"1",
+            "subject":"Preminum Plan"
+            ,"message":"Your Request is Processing.",
+            "email":"Your order #nnnnn is successfully placed",
+            "fromAddress":"Chennai",
+            "toAddress":["A1","A2","A3"],
+            "deliveryType":"MESSAGE",
+            "deliveryDate":"Wed Nov 02 17:37:24 IST 2016",
+            "entityId":"dsgfhasgdf",
+            "entityType":"Order",
+
+            }
+            ]
+            );
+
+
+        </script>
+    </changeSet>
+
+    <changeSet changeId="ChangeSet-2" author="pctl">
+        <script>
+
+            db.notification.insert([{
+            "_id":"2",
+            "subject":"Preminum Plan"
+            ,"message":"Your Request is Processing.",
+            "email":"Your order #nnnnn is successfully placed",
+            "fromAddress":"Chennai",
+            "toAddress":["A1","A2","A3"],
+            "deliveryType":"EMAIL",
+            "deliveryDate":"Wed Nov 02 17:37:24 IST 2016",
+            "entityId":"dsgfhasgdf",
+            "entityType":"Order",
+            }
+            ]
+            );
+
+
+        </script>
+    </changeSet>
+    </mongoChangeLog>

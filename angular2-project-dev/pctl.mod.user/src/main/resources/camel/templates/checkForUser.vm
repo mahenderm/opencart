@@ -1,0 +1,17 @@
+<checkForUser xmlns="http://ecaps.ctl.com/service/userAdmin">
+<userCheckRequest>
+            
+            <accountId>1</accountId>
+            
+            <accountSystemCode>2</accountSystemCode>
+            
+            <emailAddress>senthil@hcl.com</emailAddress>
+            
+            <firstName>kumar</firstName>
+            
+            <lastName>Senthil</lastName>
+            
+            <telephoneNumber>12121212</telephoneNumber>
+         </userCheckRequest>
+
+</checkForUser>

@@ -1,0 +1,12 @@
+<div class="row">
+    <modal #myModalDialog 
+        title="{{title}}" 
+        submitButtonLabel="{{submitButtonLabel}}" 
+        cancelButtonLabel="{{cancelButtonLabel}}"
+        (onSubmit)=submitHandler()
+        (onClose)=closeHandler($event)>
+        <modal-content>
+            {{message}}
+        </modal-content>
+    </modal>
+</div>

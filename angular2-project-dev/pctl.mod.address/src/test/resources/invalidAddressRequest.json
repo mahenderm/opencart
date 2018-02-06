@@ -1,0 +1,11 @@
+{
+  "id": "1",
+  "locationName": "New York",
+  "addressLine": "Brooklyn",
+  "street": "skywalk Avenue street",
+  "country": "America",
+  "city": "Charlotte",
+  "state": "NA",
+  "zipCode": "60302",
+  "checkAddress": "Brooklyn"
+}

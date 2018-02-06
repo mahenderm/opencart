@@ -1,0 +1,4 @@
+<getUserByUsername  xmlns="http://ecaps.ctl.com/service/userAdmin">
+               <username>?</username>
+               <realm>?</realm>
+            </getUserByUsername>

@@ -1,0 +1,123 @@
+.navbar-account .dropdown .dropdown-menu{
+      background-color: #fff;
+      border:1px solid #666;
+      margin:1px 0 0;
+    }
+    @media screen and (min-width:991px){
+      .navbar-account .dropdown .dropdown-menu{
+        min-width: 500px;
+      }
+    }
+		@media screen and (min-width:991px){
+      .navbar-account .dropdown .dropdown-menu.user-profile{
+        min-width: 210px;
+      }
+    }
+    .navbar-account .dropdown .dropdown-menu .card{
+      border-radius: 0;
+      margin-bottom:5px;
+    }
+    .navbar-account .dropdown .dropdown-menu > h4.text-success{
+      margin:10px;
+    }
+    .navbar-inverse .navbar-account .dropdown-menu .cyclops-icon use{
+      fill: rgba(65, 184, 52, 1);
+    }
+    
+    img
+	{
+		margin-right:10px;
+	}
+	
+	#action
+	{
+		margin-left:9px;
+	}
+	
+	#action-cart
+	{
+	   padding: 0 0 0 20px;
+	}
+	
+
+	
+	.navbar-inverse .navbar-account .dropdown-menu .cyclops-icon use
+	{
+		fill:#666;
+	}
+	
+	.alert+.new-list-view, .card-block+.new-list-view, .card-footer
+	{
+		border-top:0px;
+	}
+	
+	.card
+	{
+		    border:none;
+	}
+	
+	#NavDropdown
+	{
+		background-color:#282828;
+	}
+	#ShoppingCart
+	{
+		color:#c1c1c1;
+	}
+	#Description
+	{
+		background-color: #282828;
+    border-top: 2px solid #3d3d3d;
+	}
+	#Description  .color
+	{
+		color:#848484;
+	}
+	#List1
+	{
+	background-color: #282828;
+    border-top: 2px solid #3d3d3d;
+	color: #c1c1c1;
+	border-bottom:none;
+	}
+	
+	#List2
+	{
+	background-color: #282828;
+    border-top: 2px solid #3d3d3d;
+	color: #c1c1c1;
+	border-bottom:none;
+	}
+	
+	.navbar-account .dropdown .dropdown-menu .card
+	{
+		border-top: 2px solid #3d3d3d;
+	}
+	
+	#CardFooter
+	{
+		background-color: #282828;
+		padding-left: 24px;
+	}
+	
+	#ViewDetails
+	{
+		border-top: 2px solid #3d3d3d;
+	}
+	
+	#ViewDetails a
+	{
+		color:white;
+	}
+	#Total
+	{
+		color:#c1c1c1;
+	}
+	#Dollar
+	{
+		color:#c1c1c1;
+	}
+	.h1, .h2, .h3, h1, h2, h3
+	{
+		letter-spacing:0px;
+	}

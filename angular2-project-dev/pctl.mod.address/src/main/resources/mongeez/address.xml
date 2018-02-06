@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mongoChangeLog>
+    <changeSet changeId="ChangeSet-1" author="pctl">
+        <script>
+            db.address.drop();
+            db.address.insert(
+            {"content":{
+            "overallDuration":0,
+            "civicAddressValidationResult":{
+            "version":"2.0.0",
+            "trackingId":"GeoDevTest:2016-12-01T12:37:53.7315571Z",
+            "overallDuration":140.6259,
+            "result":"GREEN",
+            "civicAddresses":{
+            "civicAddress":[
+            {
+            "streetAddress":"93 CENTENNIAL blvd",
+            "locality":"HIGHLANDS RANCH",
+            "stateOrProvince":"CO",
+            "postCode":"80126"
+            }
+            ]
+            },
+            "geoPoint":{
+            "source":"TRILLIUM",
+            "latitude":39.561483,
+            "longitude":-104.991963,
+            "coordinateLevel":"1",
+            "accuracy":"1"
+            },
+            "censusMatchLevel":"0",
+            "postalDirectoryMatchLevel":"0",
+            "deliveryConfirmationCode":"Y",
+            "county":"DOUGLAS",
+            "metropolitanStatisticalArea":"DENVER CO"
+            }
+            },
+            "fieldValue":{
+            "addressLine":"1",
+            "city":"1",
+            "state":"1",
+            "zipCode":"1"
+            },
+            "message":"Success",
+            "code":"200"
+            }
+            );
+        </script>
+    </changeSet>
+</mongoChangeLog>

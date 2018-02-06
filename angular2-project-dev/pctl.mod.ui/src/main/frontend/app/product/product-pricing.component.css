@@ -1,0 +1,29 @@
+.new-list-view-responsive > .new-list-view > li > .list-view-item .currency:hover{
+      background: #3cac30;
+      color: #fff;
+      cursor: pointer;
+}
+
+.new-list-view-responsive > .new-list-view > li > .list-view-item .currency.disabled:hover{
+      cursor: not-allowed;
+}
+
+div .alignMar{
+      margin-top:0px;
+}
+
+div div nav.navbar-local{
+      margin-bottom: 5px;
+}
+
+div div nav.navbar-local h3.text-danger small,h3.text-danger small{
+      margin-top:0px;
+      color:#95302c;
+}
+div div nav.navbar-local h3{
+      margin-top:0px;
+}
+
+.new-list-view-header h3 { color: #3cac30; }
+
+div div nav.navbar-local { padding-bottom: 12px; }
